@@ -4,7 +4,7 @@ class CandidatsController < ApplicationController
   end
 
   def show
-    @candidats = Candidat.find(params[:id])
+    @candidat = Candidat.find(params[:id])
   end
 end
 
