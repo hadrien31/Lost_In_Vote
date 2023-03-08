@@ -1,0 +1,232 @@
+<h1>questionnaire</h1>
+
+<div class="container">
+
+
+<%= form_with model: @questionnaire do |f| %>
+<div class = "cards-question">Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse1, 1 %>
+  <%= f.label "Il faut mieux les accueillir" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse1, 2 %>
+  <%= f.label "Il faut durcir l'accès au titre de séjour" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse1, 3 %>
+  <%= f.label "Il faut favoriser les expulsions"  %></div>
+
+<div class = "cards-question">Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché</div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse2, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse2, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse2, 3 %>
+  <%= f.label "Non"  %></div>
+
+<div class = "cards-question"> Nous devons accepter de changer notre mode de consommation alimentaire pour limiter l'exploitation de la nature</div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse3, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse3, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse3, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question"> L'euthanasie doit être autorisée5</div>
+<div class= "cards-reponse">
+  <%= f.radio_button :response4, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :response4, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :response4, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question">Quelle approche faut il avoir sur la durée du temps de travail hebdomadaire?</div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse5, 1 %>
+  <%= f.label "Il faut le réduire" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse5, 2 %>
+  <%= f.label "il faut le liberaliser" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse5, 3 %>
+  <%= f.label "il ne faut pas le modifier"  %></div>
+
+  <div class = "cards-question">Etes vous favorable à une revalorisation du smic?</div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse6, 1 %>
+  <%= f.label "Oui au moins a 1400€" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse6, 2 %>
+  <%= f.label "je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse6, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question">Le cannabis doit il être légalisé?</div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse7, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse7, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse7, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question">Que faire pour augmenter le pouvoir d'achat?</div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse8, 1 %>
+  <%= f.label "Augmenter les salaires" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse8, 2 %>
+  <%= f.label "Alleger les impôts" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse8, 3 %>
+  <%= f.label "Verser une prime"  %></div>
+
+  <div class = "cards-question">Quel priorité s'impose sur le ferroviaire?</div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse9, 1 %>
+  <%= f.label "Baisser le tarif des billets ou favoriser la gratuité dans certains cas" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse9, 2 %>
+  <%= f.label "Prioriser les trains du quotidien" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse9, 3 %>
+  <%= f.label "Il ne faut rien faire tout va bien🙈"  %></div>
+
+  <div class = "cards-question">Quel est la mesure pour revaloriser le metier d'enseignant?</div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse10, 1 %>
+  <%= f.label "augmenter drastiquement les salaires" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse10, 2 %>
+  <%= f.label "Augmenter les salaires en échange de nouvelles missions" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse10, 3 %>
+  <%= f.label "augmenter modérément les salaires"  %></div>
+
+  <div class = "cards-question">Les aides sociales dissuadent de travailler?</div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse11, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse11, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse11, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question"></div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse12, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse12, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse12, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question"></div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse13, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse13, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse13, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question"></div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse14, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse14, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse14, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question"></div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse15, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse15, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse15, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question"></div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse16, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse16, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse16, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question"></div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse17, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse17, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse17, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question"></div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse18, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse18, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse18, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question"></div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse19, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse19, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse19, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <div class = "cards-question"></div>
+<div class= "cards-reponse">
+  <%= f.radio_button :reponse20, 1 %>
+  <%= f.label "Oui" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse20, 2 %>
+  <%= f.label "Je n'ai pas d'avis" %></div>
+  <div class= "cards-reponse">
+  <%= f.radio_button :reponse20, 3 %>
+  <%= f.label "Non"  %></div>
+
+  <%= f.submit "Voir le resultat"%>
+<% end %>
+
+
+
+</div>
