@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_06_162059) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_08_153213) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,6 +28,26 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_162059) do
     t.bigint "candidat_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reponse1"
+    t.string "reponse2"
+    t.string "reponse3"
+    t.string "reponse4"
+    t.string "reponse5"
+    t.string "reponse6"
+    t.string "reponse7"
+    t.string "reponse8"
+    t.string "reponse9"
+    t.string "reponse10"
+    t.string "reponse11"
+    t.string "reponse12"
+    t.string "reponse13"
+    t.string "reponse14"
+    t.string "reponse15"
+    t.string "reponse16"
+    t.string "reponse17"
+    t.string "reponse18"
+    t.string "reponse19"
+    t.string "reponse20"
     t.index ["candidat_id"], name: "index_questionnaires_on_candidat_id"
     t.index ["user_id"], name: "index_questionnaires_on_user_id"
   end
