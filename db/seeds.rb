@@ -14,22 +14,36 @@ User.destroy_all
 user1 = User.create(email: "toto@gmail.com", password:"123456", username: "toto")
 
 
-paul_cluzot = Candidat.new(first_name: "Paul", last_name: "Cluzot", partie: "liberal")
+paul_cluzot = Candidat.new(first_name: "Paul", last_name: "Cluzot", partie: "liberal", programm: "")
 
-paul_cluzot.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'centre.jpg')), content_type:"image/jpg", filename:"Paul Cluzot Photo")
+paul_cluzot.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'centre.jpg')), content_type: "image/jpg",filename:"Paul Cluzot Photo")
 
 paul_cluzot.save
 
 
-marie_clotilde_autain = Candidat.new(first_name: "Paul", last_name:"Cluzot", partie:"liberal")
+marie_clotilde_autain = Candidat.new(first_name: "Marie_Clotilde", last_name: "Autain", partie: "l'array publique", programm: "")
 
-pmarie_clotilde_autain.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'centre.jpg')), content_type:"image/jpg", filename:"Paul Cluzot Photo")
+marie_clotilde_autain.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'droite.jpg')), content_type:"image/jpg", filename:"marie_clotilde_autain.Photo")
 
-marie_clotilde_autain .save
+marie_clotilde_autain.save
 
 
+maryame_taubica = Candidat.new(first_name: "Maryame", last_name:"Taubica", partie:"la france indomptable", programm: "")
 
-# marie_clotilde_autain = Candidat.create(photo: File.open(Rails.root.join('app', 'assets', 'images', 'droite.png')), first_name: "Marie-Clotilde", last_name:"Autain", partie:"l'array publique")
-# maryame_taubica = Candidat.create(photo: File.open(Rails.root.join('app', 'assets', 'images', 'extreme-gauche.png')), first_name: "maryame", last_name:"taubica", partie:"la france indomptable")
-# rabbia_kelaoua = Candidat.create(photo: File.open(Rails.root.join('app', 'assets', 'images', 'gauche.png')), first_name: "rabbia", last_name:"kelaoua", partie:"la democratie en marche")
-# gerard_martin = Candidat.create(photo: File.open(Rails.root.join('app', 'assets', 'images', 'extreme-droite.png')), first_name: "Gerard", last_name:"Martin", partie:"partie nationaliste")
+maryame_taubica.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'extreme-gauche.png')), content_type:"image/jpg", filename:"maryame_taubica Photo")
+
+maryame_taubica.save
+
+
+rabbia_kelaoua = Candidat.new(first_name: "Rabbia", last_name:"Kelaoua", partie:"la democratie en marche", programm: "")
+
+rabbia_kelaoua.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'gauche.png')), content_type: "image/jpg", filename:"rabbia_kelaoua  Photo")
+
+rabbia_kelaoua.save
+
+
+gerard_martin = Candidat.new(first_name: "Gerard", last_name: "Martin", partie: "partie nationaliste", programm: "")
+
+gerard_martin.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'centre.jpg')), content_type: "image/jpg", filename:"gerard_martin Photo")
+
+gerard_martin.save
