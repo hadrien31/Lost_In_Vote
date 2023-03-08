@@ -25,16 +25,23 @@
 //  min-height: 100vh;
 //  line-height: 1.4;
 // }
+.card {
+    flex-direction: row;
+    // scroll-padding-inline-end: 0;
+    margin: 3px;
+}
 
 .container_card {
- background: url("/app/assets/images/droite.png");
+ background: url("droite.png");
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
- width: 350px;
- height: 500px;
+ width: 250px;
+ height: 400px;
  position: relative;
  box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
+ margin: 3px;
+
 
  .container__info {
   @include bottom;
