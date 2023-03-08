@@ -1,6 +1,14 @@
 // Specific CSS for your home-page
  .lorem {
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+ }
+
+ .image_candidat {
+    object-fit: cover;
+    height: inherit;
+    width: inherit;
  }
 
  $bright-color: #fff;

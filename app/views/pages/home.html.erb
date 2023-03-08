@@ -3,13 +3,10 @@
     <button type="button" class="btn btn-danger m-3">Démarrer</button>
 
     <div class="card">
-
         <% @candidats.each do |candidat| %>
             <%= link_to candidat_path(candidat), :action => 'go' do %>
                 <div class="container_card">
-                            <%= image_tag candidat.photo, :transformation=>[
-        {:height=>100, :width=>250, :crop=>"scale"},
-        ] %>
+                    <%= image_tag candidat.photo, class: "image_candidat" %>
                                 <%# <div class="container__info">
                                     <span><i class="fas fa-eye"></i>2350</span>
                                     <span><i class="fas fa-comment-alt"></i>624</span>
