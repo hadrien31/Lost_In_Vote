@@ -1,4 +1,4 @@
 class Candidat < ApplicationRecord
-  has_one_attached :photo
-  has_many :questionnaire
+  has_many :questionnaires
+  has_many :users, through: :questionnaires
 end
