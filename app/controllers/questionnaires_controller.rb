@@ -10,7 +10,7 @@ class QuestionnairesController < ApplicationController
     @droite = Candidat.where(partie: "L'Array Publique").first
     @extreme_gauche = Candidat.where(partie: "La France Indomptable").first
     @extreme_droite = Candidat.where(partie: "Partie Nationaliste").first
-    @centre = Candidat.where(partie: "Parti Liberal").first
+    @centre = Candidat.where(first_name: "PAUL").first
 
     if params["questionnaire"]["reponse1"]  == "1"
       @gauche.compteur += 1
