@@ -3,11 +3,19 @@
 
 <%= form_with model: @questionnaire do |f| %>
 
+<div class="card-container mb-3">
+            <div class="card">
+                <div class="card-front">
+                    <div>Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
+                </div>
+                <div class="card-back">
+                    <div>coucou</div>
+                </div>
+            </div>
+        </div>
 
 
-
-
-<div class = "cards-question">Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
+<%# <div class = "cards-question">Quelles sont les mesures a prendre vis a vis de l'immigration?</div> %>
 
 
 <div class= "cards-reponse">
@@ -20,11 +28,20 @@
   <%= f.radio_button :reponse1, 3 %>
   <%= f.label "Il faut favoriser les expulsions"  %></div>
 
-  
 
 
 
-<div class = "cards-question">Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché</div>
+<div class="card-container mb-3">
+            <div class="card">
+                <div class="card-front">
+                    <div>Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché</div>
+                </div>
+                <div class="card-back">
+                    <div>coucou</div>
+                </div>
+            </div>
+        </div>
+<%# <div class = "cards-question">Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché</div> %>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse2, 1 %>
   <%= f.label "Oui" %></div>
@@ -35,7 +52,17 @@
   <%= f.radio_button :reponse2, 3 %>
   <%= f.label "Non"  %></div>
 
-<div class = "cards-question"> Nous devons accepter de changer notre mode de consommation alimentaire pour limiter l'exploitation de la nature</div>
+<div class="card-container mb-3">
+            <div class="card">
+                <div class="card-front">
+                    <div>Nous devons accepter de changer notre mode de consommation alimentaire pour limiter l'exploitation de la nature</div>
+                </div>
+                <div class="card-back">
+                    <div>coucou</div>
+                </div>
+            </div>
+        </div>
+<%# <div class = "cards-question"> Nous devons accepter de changer notre mode de consommation alimentaire pour limiter l'exploitation de la nature</div> %>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse3, 1 %>
   <%= f.label "Oui" %></div>
@@ -46,7 +73,17 @@
   <%= f.radio_button :reponse3, 3 %>
   <%= f.label "Non"  %></div>
 
-  <div class = "cards-question"> L'euthanasie doit être autorisée5</div>
+<div class="card-container mb-3">
+            <div class="card">
+                <div class="card-front">
+                    <div> L'euthanasie doit être autorisée5</div>
+                </div>
+                <div class="card-back">
+                    <div>coucou</div>
+                </div>
+            </div>
+        </div>
+  <%# <div class = "cards-question"> L'euthanasie doit être autorisée5</div> %>
 <div class= "cards-reponse">
   <%= f.radio_button :response4, 1 %>
   <%= f.label "Oui" %></div>
