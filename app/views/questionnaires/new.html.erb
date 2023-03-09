@@ -1,16 +1,11 @@
+<div class="container">
 <h1>questionnaire</h1>
 
-<% @candidats.each do |candidat| %>
-  <% @gauche = candidat.partie == " Parti Liberal" %>
-  <% @droite = candidat.partie == "L'array publique" %>
-  <% @extreme_gauche = candidat.partie == "La france indomptable" %>
-  <% @extreme_droite = candidat.partie == "Partie nationaliste" %>
-  <% @centre = candidat.partie == "La democratie en marche" %>
-  <% end %>
-<div class="container">
-
-
 <%= form_with model: @questionnaire do |f| %>
+
+
+
+
 
 <div class = "cards-question">Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
 
@@ -25,15 +20,7 @@
   <%= f.radio_button :reponse1, 3 %>
   <%= f.label "Il faut favoriser les expulsions"  %></div>
 
-  <% if :reponse1 == 1 %>
-  <% @gauche.compteur += 1 %>
-  <% @extreme_gauche.compteur += 1 %>
-  <% elsif :reponse1 == 2 %>
-  <%  @droite.compteur += 1%>
-  <%  @centre.compteur += 1%>
-   <% elsif :reponse1 == 3 %>
-  <%  @exttreme_droite.compteur += 1%>
-  <% end %>
+  
 
 
 
@@ -147,7 +134,7 @@
   <%= f.radio_button :reponse11, 3 %>
   <%= f.label "Non"  %></div>
 
-  <div class = "cards-question"></div>
+  <div class = "cards-question">Les peines lourdes sont efficaces car elles sont dissuasives.</div>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse12, 1 %>
   <%= f.label "Oui" %></div>
@@ -158,7 +145,7 @@
   <%= f.radio_button :reponse12, 3 %>
   <%= f.label "Non"  %></div>
 
-  <div class = "cards-question"></div>
+  <div class = "cards-question">Il est légitime pour un pays d'intervenir militairement à l'étranger pour défendre ses intérêts économiques</div>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse13, 1 %>
   <%= f.label "Oui" %></div>
@@ -169,7 +156,7 @@
   <%= f.radio_button :reponse13, 3 %>
   <%= f.label "Non"  %></div>
 
-  <div class = "cards-question"></div>
+  <div class = "cards-question">Doit on construire de nouveaux reacteurs nucleaires</div>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse14, 1 %>
   <%= f.label "Oui" %></div>
@@ -180,7 +167,7 @@
   <%= f.radio_button :reponse14, 3 %>
   <%= f.label "Non"  %></div>
 
-  <div class = "cards-question"></div>
+  <div class = "cards-question">Les jeunes de moins de 30 ans doivent ils être exonéré d'impôt</div>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse15, 1 %>
   <%= f.label "Oui" %></div>
