@@ -12,25 +12,36 @@ User.destroy_all
 
 User.create(email: "toto@gmail.com", password:"123456", username: "toto")
 
+paul_cluzot = Candidat.new(first_name: "Paul", last_name: "Cluzot", partie: "Parti Liberal", programm: "", compteur: 0)
 
-Candidat.create(photo: 'centre.jpg', first_name: "Paul", last_name:"Cluzot", partie:"le Liberal", programm: "", compteur: 0)
-Candidat.create(photo: 'droite.png', first_name: "Marie-Clotilde", last_name:"Autain", partie:"L'array publique", programm: "", compteur: 0)
-Candidat.create(photo: 'extreme-gauche.png', first_name: "Maryame", last_name:"Taubica", partie:"La france indomptable", programm: "Créer une « garantie dignité » : revaloriser les minima sociaux (aucun niveau de vie en-dessous du seuil de pauvreté).
+paul_cluzot.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'centre.jpg')), content_type: "image/jpg",filename:"Paul Cluzot Photo")
 
-Loi d’urgence sociale comprenant notamment le blocage des prix des produits de première nécessité (gaz, électricité, alimentation).
+paul_cluzot.save
 
-Restructurer les emprunts des ménages surendettés et garantir à tous l’accès effectif aux services bancaires de base.
 
-Lutter contre le non-recours aux droits sociaux et civiques par la simplification des démarches.
+marie_clotilde_autain = Candidat.new(first_name: "Marie-Clotilde", last_name: "Autain", partie: "L'array Publique", programm: "", compteur: 0)
 
-Proposer une garantie d’autonomie au-dessus du seuil de pauvreté à partir de 16 ans et pour chaque étudiant détachée du foyer fiscal de ses parents (soit 1 063 euros pour une personne seule).", compteur: 0)
-Candidat.create(photo: 'gauche.png', first_name: "Rabbia", last_name:"Kelaoua", partie:"La democratie en marche", programm: "", compteur: 0)
-Candidat.create(photo: 'extreme-droite.png', first_name: "Gerard", last_name:"Martin", partie:"Partie nationaliste", programm: "Prêt aux jeunes parents qu’ils n’auraient plus besoin de rembourser après la naissance de leur troisième enfant.
+marie_clotilde_autain.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'droite.png')), content_type:"image/jpg", filename:"marie_clotilde_autain.Photo")
 
-  Réserver les aides sociales aux Français.
+marie_clotilde_autain.save
 
-  Moduler la prime d’activité pour l’augmenter dans les secteurs d’activité souffrant le plus d’une pénurie de main-d’œuvre.
 
-  Créer une prime pour les étudiants qui travaillent, conditionnée à la validation de leurs semestres.
+maryame_taubica = Candidat.new(first_name: "Maryame", last_name:"Taubica", partie:"La France Indomptable", programm: "", compteur: 0)
 
-  Doubler l'allocation de soutien familial (ASF).", compteur: 0)
+maryame_taubica.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'extreme-gauche.jpg')), content_type:"image/jpg", filename:"maryame_taubica Photo")
+
+maryame_taubica.save
+
+
+rabbia_kelaoua = Candidat.new(first_name: "Rabbia", last_name:"Kelaoua", partie:"La Democratie en Marche", programm: "", compteur: 0)
+
+rabbia_kelaoua.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'gauche.png')), content_type: "image/jpg", filename:"rabbia_kelaoua  Photo")
+
+rabbia_kelaoua.save
+
+
+gerard_martin = Candidat.new(first_name: "Gerard", last_name: "Martin", partie: "Parti Nationaliste", programm: "", compteur: 0)
+
+gerard_martin.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'extreme-droite.png')), content_type: "image/jpg", filename:"gerard_martin Photo")
+
+gerard_martin.save
