@@ -20,14 +20,14 @@ marie_clotilde_autain = Candidat.new(first_name: "MARIE_CLOTILDE", last_name: "A
 marie_clotilde_autain.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'droite.png')), content_type:"image/jpg", filename:"marie_clotilde_autain.Photo")
 marie_clotilde_autain.save
 
-maryame_taubica = Candidat.new(first_name: "MARYAME", last_name:"TAUBICA", partie:"La France Indomptable", programm: "")
+maryame_taubica = Candidat.new(first_name: "MARYAME", last_name: "TAUBICA", partie:"La France Indomptable", programm: "")
 maryame_taubica.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'extreme-gauche.png')), content_type:"image/jpg", filename:"maryame_taubica Photo")
 maryame_taubica.save
 
-rabbia_kelaoua = Candidat.new(first_name: "RABBIA", last_name:"KELAOUA", partie:"La Democratie En Marche", programm: "")
+rabbia_kelaoua = Candidat.new(first_name: "RABBIA", last_name: "KELAOUA", partie:"La Democratie En Marche", programm: "")
 rabbia_kelaoua.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'gauche.png')), content_type: "image/jpg", filename:"rabbia_kelaoua  Photo")
 rabbia_kelaoua.save
 
-gerard_martin = Candidat.new(first_name: "GERARD", last_name: "MARTINB", partie: "Partie Nationaliste", programm: "")
+gerard_martin = Candidat.new(first_name: "GERARD", last_name: "MARTIN", partie: "Partie Nationaliste", programm: "")
 gerard_martin.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'extreme-droite.png')), content_type: "image/jpg", filename:"gerard_martin Photo")
 gerard_martin.save
