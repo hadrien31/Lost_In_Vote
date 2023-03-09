@@ -21,6 +21,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_095947) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "partie"
+<<<<<<< HEAD
+=======
+    t.text "programm"
+>>>>>>> f9f747f83af73364b05ab0f2f682a540561e5d71
     t.integer "compteur"
   end
 
