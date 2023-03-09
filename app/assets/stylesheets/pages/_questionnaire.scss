@@ -42,14 +42,46 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.card-container {
+  position: relative;
+margin-left: auto;
+margin-right: auto;
 
-// .cards-question + label{
-//  /* Add if not using autoprefixer */
-//   -webkit-appearance: none;
-//   appearance: none;
-//   /* For iOS < 15 to remove gradient background */
-//   background-color: #fff;
-//   /* Not removed via appearance */
-//   margin: 0;
+  height: 50px;
+  width: 60vw;
+}
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+.card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+.card-front {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 
-// }
+  backface-visibility: hidden;
+  background-color: grey;
+border-radius: 8px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card-back {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  backface-visibility: hidden;
+  background-color: grey;
+border-radius: 8px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: rotateY(-180deg);
+}

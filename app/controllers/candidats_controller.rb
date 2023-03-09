@@ -6,10 +6,10 @@ class CandidatsController < ApplicationController
   def show
     @candidat = Candidat.find(params[:id])
   end
-end
 
-private
+  private
 
-def candidat_params
-  params.require(:candidat).permit(:first_name, :last_name, :partie, :photo)
+  def candidat_params
+    params.require(:candidat).permit(:first_name, :last_name, :partie, :photo)
+  end
 end
