@@ -2,58 +2,17 @@
 
 <div class = "container">
   <div>
-    <%= image_tag "centre.jpg", class: "img-fluid object-fit w-100 p-3" %>
-    <h2 class="text-center">  Paul Cluzot </h2>
-    <p class="text-center">  Parti Libéral </p>
+    <%= image_tag @candidat.photo, class: "img-fluid object-fit w-100 p-3" %>
+    <h2 class="text-center"><%= @candidat.first_name %> </h2>
+    <h2 class="text-center"><%= @candidat.last_name %> </h2>
+    <p class="text-center"><%= @candidat.partie %></p>
     <div class="text-start">
+    <p> <%= @candidat.programm %> </p>
       Lorem ipsum dolor sit amet. Ut facere soluta sed delectus molestiae ut corporis ipsum qui porro dolor aut nesciunt nobis sed doloremque dolorem. Ut corporis perspiciatis et repudiandae consequatur id necessitatibus aspernatur et commodi delectus rem accusantium dicta ut repellat sapiente in quam quae. Aut animi commodi aut rerum accusantium sit totam optio est ipsum commodi quo veniam doloribus sed reprehenderit veritatis ut nostrum deserunt.
       Et rerum veritatis sit amet aliquid qui omnis aperiam eum omnis necessitatibus. Non distinctio similique et consectetur harum eos voluptatem magni ut laboriosam natus ab voluptates deleniti? Et sint eius eos ipsam saepe qui molestiae velit.
       Et sequi fugit ad aperiam quia et facere galisum. Non aperiam fugit ut voluptas dolores ut molestiae perspiciatis et illo officiis.
     </div>
   </div>
-
-  <div>
-    <%= image_tag "droite.png", class: "img-fluid object-fit w-100 p-3" %>
-    <h2 class="text-center">MARIE-CLOTILDE AUTAIN </h2>
-    <p class="text-center">L'Array Publique</p>
-    <div class = "text-start">
-      Lorem ipsum dolor sit amet. Ut facere soluta sed delectus molestiae ut corporis ipsum qui porro dolor aut nesciunt nobis sed doloremque dolorem. Ut corporis perspiciatis et repudiandae consequatur id necessitatibus aspernatur et commodi delectus rem accusantium dicta ut repellat sapiente in quam quae. Aut animi commodi aut rerum accusantium sit totam optio est ipsum commodi quo veniam doloribus sed reprehenderit veritatis ut nostrum deserunt.
-      Et rerum veritatis sit amet aliquid qui omnis aperiam eum omnis necessitatibus. Non distinctio similique et consectetur harum eos voluptatem magni ut laboriosam natus ab voluptates deleniti? Et sint eius eos ipsam saepe qui molestiae velit.
-      Et sequi fugit ad aperiam quia et facere galisum. Non aperiam fugit ut voluptas dolores ut molestiae perspiciatis et illo officiis.
-    </div>
-  </div>
-
-<div>
- <%= image_tag "extreme-gauche.png", class: "img-fluid object-fit w-100 p-3" %>
- <h2 class="text-center"> MARYAM TAUBICA </h2>
- <p class="text-center">  La France Indomptable</p>
-<div class = "text-start">
-Lorem ipsum dolor sit amet. Ut facere soluta sed delectus molestiae ut corporis ipsum qui porro dolor aut nesciunt nobis sed doloremque dolorem. Ut corporis perspiciatis et repudiandae consequatur id necessitatibus aspernatur et commodi delectus rem accusantium dicta ut repellat sapiente in quam quae. Aut animi commodi aut rerum accusantium sit totam optio est ipsum commodi quo veniam doloribus sed reprehenderit veritatis ut nostrum deserunt.
-Et rerum veritatis sit amet aliquid qui omnis aperiam eum omnis necessitatibus. Non distinctio similique et consectetur harum eos voluptatem magni ut laboriosam natus ab voluptates deleniti? Et sint eius eos ipsam saepe qui molestiae velit.
-Et sequi fugit ad aperiam quia et facere galisum. Non aperiam fugit ut voluptas dolores ut molestiae perspiciatis et illo officiis.
-</div>
-</div>
-
-<div>
- <%= image_tag "gauche_new.png", class: "img-fluid object-fit w-100 p-3"  %>
- <h2 class="text-center">RABBIA KELOUA </h2>
- <p class="text-center"> La Démocratie en Marche</p>
-<div class = "text-start">
-Lorem ipsum dolor sit amet. Ut facere soluta sed delectus molestiae ut corporis ipsum qui porro dolor aut nesciunt nobis sed doloremque dolorem. Ut corporis perspiciatis et repudiandae consequatur id necessitatibus aspernatur et commodi delectus rem accusantium dicta ut repellat sapiente in quam quae. Aut animi commodi aut rerum accusantium sit totam optio est ipsum commodi quo veniam doloribus sed reprehenderit veritatis ut nostrum deserunt.
-Et rerum veritatis sit amet aliquid qui omnis aperiam eum omnis necessitatibus. Non distinctio similique et consectetur harum eos voluptatem magni ut laboriosam natus ab voluptates deleniti? Et sint eius eos ipsam saepe qui molestiae velit.
-Et sequi fugit ad aperiam quia et facere galisum. Non aperiam fugit ut voluptas dolores ut molestiae perspiciatis et illo officiis.
-</div>
-</div>
-
-<div>
- <%= image_tag "extreme-droite.png", class: "img-fluid object-fit w-100 p-3" %>
- <h2 class="text-center">GERARD MARTIN </h2>
- <p class="text-center">Le Parti Nationaliste</p>
-<div class = "text-start">
-Lorem ipsum dolor sit amet. Ut facere soluta sed delectus molestiae ut corporis ipsum qui porro dolor aut nesciunt nobis sed doloremque dolorem. Ut corporis perspiciatis et repudiandae consequatur id necessitatibus aspernatur et commodi delectus rem accusantium dicta ut repellat sapiente in quam quae. Aut animi commodi aut rerum accusantium sit totam optio est ipsum commodi quo veniam doloribus sed reprehenderit veritatis ut nostrum deserunt.
-Et rerum veritatis sit amet aliquid qui omnis aperiam eum omnis necessitatibus. Non distinctio similique et consectetur harum eos voluptatem magni ut laboriosam natus ab voluptates deleniti? Et sint eius eos ipsam saepe qui molestiae velit.
-Et sequi fugit ad aperiam quia et facere galisum. Non aperiam fugit ut voluptas dolores ut molestiae perspiciatis et illo officiis.
-</div>
 </div>
 
 <%= @candidat.first_name %>

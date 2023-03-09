@@ -12,7 +12,11 @@
 
 
 
+
 ActiveRecord::Schema[7.0].define(version: 2023_03_08_153213) do
+
+
+ActiveRecord::Schema[7.0].define(version: 2023_03_09_104929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +57,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_153213) do
     t.datetime "updated_at", null: false
     t.string "partie"
     t.text "programm"
+    t.integer "compteur"
+
   end
 
   create_table "questionnaires", force: :cascade do |t|
