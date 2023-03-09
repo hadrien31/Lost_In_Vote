@@ -1,10 +1,20 @@
 <h1>questionnaire</h1>
 
+<% @candidats.each do |candidat| %>
+  <% @gauche = candidat.partie == " Parti Liberal" %>
+  <% @droite = candidat.partie == "L'array publique" %>
+  <% @extreme_gauche = candidat.partie == "La france indomptable" %>
+  <% @extreme_droite = candidat.partie == "Partie nationaliste" %>
+  <% @centre = candidat.partie == "La democratie en marche" %>
+  <% end %>
 <div class="container">
 
 
 <%= form_with model: @questionnaire do |f| %>
+
 <div class = "cards-question">Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
+
+
 <div class= "cards-reponse">
   <%= f.radio_button :reponse1, 1 %>
   <%= f.label "Il faut mieux les accueillir" %></div>
@@ -14,6 +24,18 @@
   <div class= "cards-reponse">
   <%= f.radio_button :reponse1, 3 %>
   <%= f.label "Il faut favoriser les expulsions"  %></div>
+
+  <% if :reponse1 == 1 %>
+  <% @gauche.compteur += 1 %>
+  <% @extreme_gauche.compteur += 1 %>
+  <% elsif :reponse1 == 2 %>
+  <%  @droite.compteur += 1%>
+  <%  @centre.compteur += 1%>
+   <% elsif :reponse1 == 3 %>
+  <%  @exttreme_droite.compteur += 1%>
+  <% end %>
+
+
 
 <div class = "cards-question">Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché</div>
 <div class= "cards-reponse">
@@ -109,7 +131,7 @@
   <%= f.label "augmenter drastiquement les salaires" %></div>
   <div class= "cards-reponse">
   <%= f.radio_button :reponse10, 2 %>
-  <%= f.label "Augmenter les salaires en échange de nouvelles missions" %></div>
+  <%= f.label "Augmenter les moyens" %></div>
   <div class= "cards-reponse">
   <%= f.radio_button :reponse10, 3 %>
   <%= f.label "augmenter modérément les salaires"  %></div>
