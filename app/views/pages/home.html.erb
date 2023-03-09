@@ -3,7 +3,7 @@
         <br>Les questions portent sur des sujets tels que l'économie, l'environnement et les droits de l'homme.
         <br>Les réponses des utilisateurs sont ensuite utilisées pour proposer des partis politiques et des candidats qui correspondent le mieux à leurs opinions.
         <br>Le site vise à aider les électeurs à prendre des décisions éclairées lors des élections.</p>
-    <a href="questionnaires/:id" class="button-30">Démarrer</a>
+    <a href="/questionnaires/new" class="button-30">Démarrer</a>
     <%# <button class="button-30" role="button">Démarrer</button> %>
     <hr>
     <div class="card">
@@ -13,7 +13,7 @@
                     <%= image_tag candidat.photo, class: "image_candidat" %>
                     <div class="container__profile">
                         <div class="container__profile__text">
-                            <h2><%= candidat.first_name %> <%= candidat.last_name %></h2>
+                            <h2><%= candidat.first_name %> <%= candidat.last_name.upcase() %></h2>
                             <p><%= candidat.partie %></p>
                         </div>
                     </div>
