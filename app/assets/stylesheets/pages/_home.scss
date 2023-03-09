@@ -37,18 +37,19 @@
     flex-direction: row;
     // scroll-padding-inline-end: 0;
     margin: 3px;
+    background-color: transparent;
 }
 
 .container_card {
- background: url("droite.png");
- background-repeat: no-repeat;
- background-position: center;
- background-size: cover;
+//  background: url("droite.png");
+//  background-repeat: no-repeat;
+//  background-position: center;
+//  background-size: cover;
  width: 250px;
  height: 400px;
  position: relative;
  box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
- margin: 3px;
+ margin: 5px;
 
 
  .container__info {
@@ -69,7 +70,7 @@
  }
 
  .container__profile {
-  background-color: #e4f2fd;
+  background-color: #BF3737;
   display: flex;
   align-items: center;
   padding: 20px;
@@ -84,12 +85,14 @@
    margin-right: 10px;
   }
   h2 {
-   color: #334454;
    font-size: 1.2rem;
+   font-family: 'Times New Roman', Times, serif;
+   color: white;
   }
   p {
-   color: #a1b2bc;
    font-size: 0.8rem;
+   font-family: 'Times New Roman', Times, serif;
+   color: white;
   }
   p b {
    font-style: italic;
