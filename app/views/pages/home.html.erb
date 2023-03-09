@@ -1,7 +1,11 @@
 <div class="container">
-    <p class="lorem m-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
-    <button type="button" class="btn btn-danger m-3">Démarrer</button>
-
+    <p class="lorem m-3">Lost In Vote propose un questionnaire sur les positions politiques des utilisateurs.
+        <br>Les questions portent sur des sujets tels que l'économie, l'environnement et les droits de l'homme.
+        <br>Les réponses des utilisateurs sont ensuite utilisées pour proposer des partis politiques et des candidats qui correspondent le mieux à leurs opinions.
+        <br>Le site vise à aider les électeurs à prendre des décisions éclairées lors des élections.</p>
+    <a href="questionnaires/:id" class="button-30">Démarrer</a>
+    <%# <button class="button-30" role="button">Démarrer</button> %>
+    <hr>
     <div class="card">
         <% @candidats.each do |candidat| %>
             <%= link_to candidat_path(candidat), :action => 'go' do %>
@@ -13,10 +17,10 @@
                                     <span><i class="fas fa-download"></i>1470</span>
                                 </div> %>
                     <div class="container__profile">
-                        <img
+                        <%# <img
                         src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
                         alt="people"
-                        />
+                        /> %>
                         <div class="container__profile__text">
                             <h2><%= candidat.first_name %> <%= candidat.last_name %></h2>
                             <p><%= candidat.partie %></p>
@@ -27,3 +31,22 @@
         <% end %>
     </div>
 </div>
+
+
+<div class="carousel">
+  <ul class="carousel__list" data-controller="candidats-card" data-action="click->candidats-card#moveCard">
+    <li class="carousel__item" data-pos="-2">1</li>
+    <li class="carousel__item" data-pos="-1">2</li>
+    <li class="carousel__item" data-pos="0">3</li>
+    <li class="carousel__item" data-pos="1">4</li>
+    <li class="carousel__item" data-pos="2">5</li>
+  </ul>
+</div>
+
+    <%= @candidats.each_with_index do |candidat, index| %>
+      <% if index >= 3 %>
+        <li class="carousel__item" data-pos="-<%= index %>">1</li>
+        <% else %>
+        <li class="carousel__item" data-pos="<%= index %>">1</li>
+      <% end %>
+    <% end  %>
