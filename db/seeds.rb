@@ -18,11 +18,13 @@ paul_cluzot.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images'
 
 paul_cluzot.save
 
+
 marie_clotilde_autain = Candidat.new(first_name: "Marie-Clotilde", last_name: "Autain", partie: "L'array Publique", programm: "", compteur: 0)
 
 marie_clotilde_autain.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'droite.png')), content_type:"image/jpg", filename:"marie_clotilde_autain.Photo")
 
 marie_clotilde_autain.save
+
 
 maryame_taubica = Candidat.new(first_name: "Maryame", last_name:"Taubica", partie:"La France Indomptable", programm: "", compteur: 0)
 
@@ -33,9 +35,10 @@ maryame_taubica.save
 
 rabbia_kelaoua = Candidat.new(first_name: "Rabbia", last_name:"Kelaoua", partie:"La Democratie en Marche", programm: "", compteur: 0)
 
-rabbia_kelaoua.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'gauche.png')), content_type: "image/jpg", filename:"rabbia_kelaoua  Photo")
+rabbia_kelaoua.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'gauche_new.png')), content_type: "image/jpg", filename:"rabbia_kelaoua  Photo")
 
 rabbia_kelaoua.save
+
 
 gerard_martin = Candidat.new(first_name: "Gerard", last_name: "Martin", partie: "Parti Nationaliste", programm: "", compteur: 0)
 
