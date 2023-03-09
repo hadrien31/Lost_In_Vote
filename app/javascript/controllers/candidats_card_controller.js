@@ -37,10 +37,10 @@ export default class extends Controller {
     [this.current, this.prev, this.next, this.first, this.last].forEach(item => {
       this.itemPos = item.dataset.pos;
 
-      item.dataset.pos = this.getPos(this.itemPos ,newActivePos)
+      item.dataset.pos = this.getPos(this.itemPos , newActivePos)
     });
-
   }
+
   getPos(current, active) {
     this.diff = current - active;
 
