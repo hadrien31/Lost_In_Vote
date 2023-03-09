@@ -6,11 +6,11 @@ class QuestionnairesController < ApplicationController
 
   def create
     @candidats = Candidat.all
-    @gauche = Candidat.where(partie: "La democratie en marche").first
-    @droite = Candidat.where(partie: "L'array publique").first
-    @extreme_gauche = Candidat.where(partie: "La france indomptable").first
-    @extreme_droite = Candidat.where(partie: "Partie nationaliste").first
-    @centre = Candidat.where(partie: "Liberal").first
+    @gauche = Candidat.where(partie: "La Democratie en Marche").first
+    @droite = Candidat.where(partie: "L'array Publique").first
+    @extreme_gauche = Candidat.where(partie: "La France Indomptable").first
+    @extreme_droite = Candidat.where(partie: "Parti Nationaliste").first
+    @centre = Candidat.where(partie: "Parti Liberal").first
 
     if params["questionnaire"]["reponse1"]  == "1"
       @gauche.compteur += 1
