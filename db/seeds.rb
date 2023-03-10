@@ -36,7 +36,7 @@ maryame_taubica.save
 
 rabbia_kelaoua = Candidat.new(first_name: "Rabbia", last_name:"Kelaoua", partie:"La Democratie en Marche", programm: "Depuis l'agression russe contre l'Ukraine, l'Europe est confrontée à la guerre et les démocraties doivent assumer leurs responsabilités. En tant qu'Européen convaincu, je m'engagerai à renforcer l'Europe par la justice et la solidarité, notamment en contribuant à la création d'une défense commune forte et autonome. Pour relever le défi social, je m'engage à rendre justice aux travailleurs de première ligne, à étendre les droits des travailleurs et à restaurer les services publics prioritaires tels que l'école et l'hôpital. Je renforcerai également la protection sociale et l'inclusion des personnes en situation de handicap. Pour répondre aux enjeux environnementaux, je conduirai la réindustrialisation décarbonée du pays, grâce à 4 grandes odyssées industrielles. Je veux redonner le pouvoir aux citoyens en réformant la Ve République, en instaurant le référendum d'initiative citoyenne et en procédant à un nouvel acte de décentralisation. Enfin, je lancerai un plan de lutte contre la délinquance pour assurer la sécurité du quotidien, donner plus de moyens à la justice et rendre à la culture et aux artistes la place qui leur revient.", compteur: 0)
 
-rabbia_kelaoua.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'gauche_new.png')), content_type: "image/jpg", filename:"rabbia_kelaoua  Photo")
+rabbia_kelaoua.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'gauche.png')), content_type: "image/jpg", filename:"rabbia_kelaoua  Photo")
 
 rabbia_kelaoua.save
 
