@@ -1,13 +1,22 @@
 
 <div class = "container">
+
   <div class ="list-prog">
-    <%= image_tag @candidat.photo, class:"avatar-list"%>
-      <h2 class="text-center"> <%= @candidat.first_name.upcase() %> <%= @candidat.last_name.upcase() %>
-      </h2>
-      <br>
-    <p class="text-center"><%= @candidat.partie %> </p>
-    <div class="text-start">
-    <p> <%= @candidat.programm %> </p>
+    <div>
+      <%= image_tag @candidat.photo, class:"avatar-list"%>
     </div>
+    <div>
+      <div class="margin-top-50">
+        <h2 class="text-center"> <%= @candidat.first_name.capitalize() %> <%= @candidat.last_name.upcase() %>
+        </h2>
+      </div>
+      <div>
+        <p class="text-center"><%= @candidat.partie %> </p>
+      </div>
+    </div>
+  </div>
+    <h3>SON PROGRAMME</h3>
+  <div class="text-start">
+    <p> <%= @candidat.programm %> </p>
   </div>
 </div>
