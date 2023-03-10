@@ -10,6 +10,7 @@ Candidat.destroy_all
 Questionnaire.destroy_all
 User.destroy_all
 
+
 User.create(email: "toto@gmail.com", password:"123456", username: "toto")
 
 paul_cluzot = Candidat.new(first_name: "Paul", last_name: "Cluzot", partie: "Parti Liberal", programm: "", compteur: 0)
@@ -35,7 +36,7 @@ maryame_taubica.save
 
 rabbia_kelaoua = Candidat.new(first_name: "Rabbia", last_name:"Kelaoua", partie:"La Democratie en Marche", programm: "", compteur: 0)
 
-rabbia_kelaoua.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'gauche.png')), content_type: "image/jpg", filename:"rabbia_kelaoua  Photo")
+rabbia_kelaoua.photo.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'gauche_new.png')), content_type: "image/jpg", filename:"rabbia_kelaoua  Photo")
 
 rabbia_kelaoua.save
 

@@ -6,11 +6,11 @@ class QuestionnairesController < ApplicationController
 
   def create
     @candidats = Candidat.all
-    @gauche = Candidat.where(partie: "La Democratie En Marche").first
-    @droite = Candidat.where(partie: "L'Array Publique").first
+    @gauche = Candidat.where(partie: "La Democratie en Marche").first
+    @droite = Candidat.where(partie: "L'array Publique").first
     @extreme_gauche = Candidat.where(partie: "La France Indomptable").first
-    @extreme_droite = Candidat.where(partie: "Partie Nationaliste").first
-    @centre = Candidat.where(first_name: "PAUL").first
+    @extreme_droite = Candidat.where(partie: "Parti Nationaliste").first
+    @centre = Candidat.where(partie: "Parti Liberal").first
 
     if params["questionnaire"]["reponse1"]  == "1"
       @gauche.compteur += 1
@@ -35,8 +35,6 @@ class QuestionnairesController < ApplicationController
     if params["questionnaire"]["reponse3"]  == "1"
       @extreme_droite.compteur += 1
       @extreme_gauche.compteur += 1
-    elsif params["questionnaire"]["reponse3"]  == "2"
-
     elsif params["questionnaire"]["reponse3"]  == "3"
       @centre.compteur += 1
       @droite.compteur += 1
@@ -103,26 +101,34 @@ class QuestionnairesController < ApplicationController
       @droite.compteur += 1
     end
 
-    # if params["questionnaire"]["reponse7"]  == "1"
+    # if params["questionnaire"]["reponse10"]  == "1"
     #   @extreme_gauche.compteur += 1
     #   @extreme_droite.compteur += 1
-    # elsif params["questionnaire"]["reponse7"]  == "2"
+    # elsif params["questionnaire"]["reponse10"]  == "2"
     #   @gauche.compteur += 1
-    # elsif params["questionnaire"]["reponse7"]  == "3"
+    # elsif params["questionnaire"]["reponse10"]  == "3"
     #   @centre.compteur += 1
     #   @droite.compteur += 1
     # end
 
-    if params["questionnaire"]["reponse7"]  == "1"
+    if params["questionnaire"]["reponse11"]  == "1"
       @droite.compteur += 1
       @centre.compteur += 1
       @extreme_droite.compteur += 1
-    elsif params["questionnaire"]["reponse7"] == "3"
+    elsif params["questionnaire"]["reponse11"] == "3"
       @gauche.compteur += 1
       @extreme_gauche.compteur += 1
     end
 
-
+    if params["questionnaire"]["reponse12"]  == "1"
+      @extreme_gauche.compteur += 1
+      @extreme_droite.compteur += 1
+    elsif params["questionnaire"]["reponse12"]  == "2"
+      @gauche.compteur += 1
+    elsif params["questionnaire"]["reponse12"]  == "3"
+      @centre.compteur += 1
+      @droite.compteur += 1
+    end
 
 
 

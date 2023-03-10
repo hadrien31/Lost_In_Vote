@@ -1,10 +1,9 @@
+
+
 <div class="container">
 <h1>questionnaire</h1>
 
 <%= form_with model: @questionnaire do |f| %>
-
-
-
 
 
 <div class = "cards-question">Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
@@ -20,7 +19,6 @@
   <%= f.radio_button :reponse1, 3 %>
   <%= f.label "Il faut favoriser les expulsions"  %></div>
 
-  
 
 
 
@@ -35,6 +33,7 @@
   <%= f.radio_button :reponse2, 3 %>
   <%= f.label "Non"  %></div>
 
+
 <div class = "cards-question"> Nous devons accepter de changer notre mode de consommation alimentaire pour limiter l'exploitation de la nature</div>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse3, 1 %>
@@ -46,7 +45,10 @@
   <%= f.radio_button :reponse3, 3 %>
   <%= f.label "Non"  %></div>
 
-  <div class = "cards-question"> L'euthanasie doit être autorisée5</div>
+
+  <div class = "cards-question fa-circle-info"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="l'euthanasie consiste en..."> L'euthanasie doit être autorisée</div>
+
+
 <div class= "cards-reponse">
   <%= f.radio_button :response4, 1 %>
   <%= f.label "Oui" %></div>
