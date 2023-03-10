@@ -9,7 +9,7 @@
         <% @candidats.each do |candidat| %>
             <%= link_to candidat_path(candidat), :action => 'go' do %>
                 <div class="container_card">
-                    <%= image_tag candidat.photo, class: "image_candidat" %>
+                    <%= cl_image_tag candidat.photo.key, class: "image_candidat" %>
                     <div class="container__profile">
                         <div class="container__profile__text">
                             <h2><%= candidat.first_name %> <%= candidat.last_name.upcase() %></h2>
@@ -28,24 +28,24 @@
 
         <% if index == 0 %>
             <div class="carousel__item" data-pos="-2">
-                <%= image_tag candidat.photo, class: "image_candidat --from-carousel" %>
+                <%= cl_image_tag candidat.photo.key, class: "image_candidat --from-carousel" %>
             </div>
 
         <% elsif index == 1 %>
             <div class="carousel__item" data-pos="-1">
-                <%= image_tag candidat.photo, class: "image_candidat --from-carousel" %>
+                <%= cl_image_tag candidat.photo.key, class: "image_candidat --from-carousel" %>
             </div>
         <% elsif index == 2 %>
             <div class="carousel__item" data-pos="0">
-                <%= image_tag candidat.photo, class: "image_candidat --from-carousel" %>
+                <%= cl_image_tag candidat.photo.key, class: "image_candidat --from-carousel" %>
             </div>
         <% elsif index == 3 %>
             <div class="carousel__item" data-pos="1">
-                <%= image_tag candidat.photo, class: "image_candidat --from-carousel" %>
+                <%= cl_image_tag candidat.photo.key, class: "image_candidat --from-carousel" %>
             </div>
         <% elsif index == 4 %>
             <div class="carousel__item" data-pos="2">
-                <%= image_tag candidat.photo, class: "image_candidat --from-carousel" %>
+                <%= cl_image_tag candidat.photo.key, class: "image_candidat --from-carousel" %>
             </div>
         <% end %>
     <% end %>

@@ -3,7 +3,7 @@
 
   <div class ="list-prog">
     <div>
-      <%= image_tag @candidat.photo, class:"avatar-list"%>
+      <%= cl_image_tag @candidat.photo.key, class:"avatar-list"%>
     </div>
     <div>
       <div class="margin-top-50">
