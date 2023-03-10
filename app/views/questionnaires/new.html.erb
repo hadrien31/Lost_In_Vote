@@ -1,9 +1,25 @@
 
 
 <div class="container">
-<h1>questionnaire</h1>
+
+<h1>Pas de panique ce questionnaire ne te prendra que 5 minutes!</h1>
 
 <%= form_with model: @questionnaire do |f| %>
+       <%# <div class="card-container">
+            <div class="card">
+                <div class="card-front">
+                <i class= "fa-solid fa-circle-info"></i>
+                    <div>Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
+                </div>
+                <div class="card-back">
+                    <div>Here is the back...</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> %>
+
+
 
 
 <div class = "cards-question">Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
@@ -46,10 +62,11 @@
   <%= f.label "Non"  %></div>
 
 
-  <div class = "cards-question fa-circle-info"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="l'euthanasie consiste en..."> L'euthanasie doit être autorisée</div>
+  <div class = "cards-question"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="l'euthanasie consiste en..."><i class="fa fa-circle-info me-1"></i> L'euthanasie doit être autorisée?</div>
 
 
-<div class= "cards-reponse">
+
+  <div class= "cards-reponse">
   <%= f.radio_button :response4, 1 %>
   <%= f.label "Oui" %></div>
   <div class= "cards-reponse">
@@ -235,7 +252,7 @@
   <%= f.radio_button :reponse20, 3 %>
   <%= f.label "Non"  %></div>
 
-  <%= f.submit "Voir le resultat"%>
+  <%= f.submit %>
 <% end %>
 
 
