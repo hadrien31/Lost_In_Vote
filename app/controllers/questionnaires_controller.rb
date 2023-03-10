@@ -7,17 +7,24 @@ class QuestionnairesController < ApplicationController
   def create
     @candidats = Candidat.all
     @gauche = Candidat.where(partie: "La Democratie en Marche").first
+    @gauche.compteur = 0
     @droite = Candidat.where(partie: "L'array Publique").first
+    @droite.compteur = 0
     @extreme_gauche = Candidat.where(partie: "La France Indomptable").first
+    @extreme_gauche.compteur = 0
     @extreme_droite = Candidat.where(partie: "Parti Nationaliste").first
+    @extreme_droite.compteur = 0
     @centre = Candidat.where(partie: "Parti Liberal").first
+    @centre.compteur = 0
 
     if params["questionnaire"]["reponse1"]  == "1"
       @gauche.compteur += 1
+      # @gauche.save
       @extreme_gauche.compteur += 1
     elsif params["questionnaire"]["reponse1"]  == "2"
       @centre.compteur += 1
       @droite.compteur += 1
+      # @centre.save
     elsif params["questionnaire"]["reponse1"]  == "3"
       @extreme_droite.compteur += 1
     end
@@ -129,9 +136,12 @@ class QuestionnairesController < ApplicationController
       @centre.compteur += 1
       @droite.compteur += 1
     end
-
-
-
+    @gauche.save
+    @centre.save
+    @extreme_gauche.save
+    @extreme_droite.save
+    @droite.save
+    @candidats = @candidats.sort_by{ |candidat| candidat.compteur}.last
 
 
 
