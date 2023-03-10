@@ -1,12 +1,12 @@
 
 <div class = "container">
-  <div>
-    <%= image_tag @candidat.photo, class:"img-fluid object-fit w-100 p-3")%>
-    <h2 class="text-center"><%= @candidat.first_name.upcase() %> <%= @candidat.last_name.upcase()  %> </h2>
-
+  <div class ="list-prog">
+    <%= image_tag @candidat.photo, class:"avatar-list"%>
+      <h2 class="text-center"> <%= @candidat.first_name.upcase() %> <%= @candidat.last_name.upcase() %>
+      </h2>
+      <br>
     <p class="text-center"><%= @candidat.partie %> </p>
     <div class="text-start">
-
     <p> <%= @candidat.programm %> </p>
     </div>
   </div>

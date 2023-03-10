@@ -7,4 +7,25 @@
 .list-group-item{
   background-color:linear-gradient(186deg, rgba(35,39,78,1) 0%, rgba(92,101,187,1) 35%, rgba(141,141,141,1) 100%);
   background-color: transparent;
+  color: white;
+  border: none;
+
+}
+
+.avatar-list {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.list-avatars {
+  display: flex;
+  flex-direction: column;
 }
