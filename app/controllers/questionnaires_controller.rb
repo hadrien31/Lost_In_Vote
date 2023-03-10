@@ -141,7 +141,7 @@ class QuestionnairesController < ApplicationController
     @extreme_gauche.save
     @extreme_droite.save
     @droite.save
-    @candidats = @candidats.sort_by{ |candidat| candidat.compteur}.last
+    @winner = @candidats.sort_by{ |candidat| candidat.compteur}.last
 
 
 
