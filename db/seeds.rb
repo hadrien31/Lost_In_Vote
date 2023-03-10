@@ -10,6 +10,7 @@ Candidat.destroy_all
 Questionnaire.destroy_all
 User.destroy_all
 
+
 User.create(email: "toto@gmail.com", password:"123456", username: "toto")
 
 paul_cluzot = Candidat.new(first_name: "Paul", last_name: "Cluzot", partie: "Parti Liberal", programm: "", compteur: 0)
