@@ -3,12 +3,16 @@
 //   position: sticky;
 //   top: 0;
 // }
-.img-fluid{
-  border-radius: 85%;
-  // height: fit-content;
+// .img-fluid{
+//   border-radius: 85%;
+//   // height: fit-content;
 
-}
+// }
 
-.object-fit{
-  object-fit: cover;
+// .object-fit{
+//   object-fit: cover;
+// }
+.list-prog {
+  display: flex;
+  flex-direction: row;
 }
