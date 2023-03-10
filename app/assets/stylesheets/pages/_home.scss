@@ -78,6 +78,8 @@
     flex-direction: row;
     margin: 3px;
     background-color: transparent;
+    border-color: transparent;
+    justify-content: space-evenly;
 }
 
 .container_card {
@@ -109,7 +111,6 @@
   background-color: #BF3737;
   display: flex;
   align-items: center;
-  padding: 20px;
   @include bottom();
   bottom: 0;
   img {
@@ -123,10 +124,12 @@
   h2 {
    font-size: 1rem;
    color: white;
+    padding: 10px 0px 0px 10px;
   }
   p {
    font-size: 0.75rem;
    color: white;
+   padding: 0px 0px 0px 10px;
   }
   p b {
    font-style: italic;
@@ -174,28 +177,12 @@ body {
     justify-content: center;
     color: #fff;
     font-size: 0px;
-    width: 150px;
-    height: 250px;
+    width: 200px;
+    height: 350px;
     border-radius: 12px;
     box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
     position: absolute;
     transition: all .3s ease-in;
-    
-    &:nth-child(1) {
-      background: linear-gradient(45deg, #2D35EB 0%, #904ED4 100%);
-    }
-    &:nth-child(2) {
-      background: linear-gradient(45deg, #2D35EB 0%, #fdbb2d 100%);
-    }
-    &:nth-child(3) {
-      background: linear-gradient(45deg, #2D35EB 0%, #22c1c3 100%);
-    }
-    &:nth-child(4) {
-      background: linear-gradient(45deg, #fdbb2d 0%, #904ED4 100%);
-    }
-    &:nth-child(5) {
-      background: linear-gradient(45deg, #22c1c3 0%, #904ED4 100%);
-    }
     
     &[data-pos="0"] {
       z-index: 5;
@@ -234,3 +221,58 @@ body {
     }
   }
 }
+
+.container_card_caroussel {
+    width: 200px;
+    height: 350px;
+    position: relative;
+    // box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
+    margin: 3px;
+   
+   
+    .container__info {
+     @include bottom;
+     bottom: 20%;
+     display: flex;
+     align-items: flex-end;
+     padding: 15px 30px;
+     color: $bright-color;
+   
+     span {
+      margin-right: 20px;
+     }
+   
+     i {
+      margin-right: 10px;
+     }
+    }
+   
+    .container__profile {
+     background-color: #BF3737;
+     display: flex;
+     align-items: center;
+     @include bottom();
+     bottom: 0;
+     img {
+      width: 5vw;
+      height: 5vw;
+      border-radius: 50%;
+      object-position: center;
+      object-fit: cover;
+      margin-right: 10px;
+     }
+     h2 {
+      font-size: 1rem;
+      color: white;
+       padding: 10px 0px 0px 10px;
+     }
+     p {
+      font-size: 0.75rem;
+      color: white;
+      padding: 0px 0px 0px 10px;
+     }
+     p b {
+      font-style: italic;
+     }
+    }
+   }
