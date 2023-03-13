@@ -1,5 +1,3 @@
-
-
 <div class="container">
 
 <h1>Pas de panique ce questionnaire ne te prendra que 5 minutes!</h1>
@@ -47,7 +45,7 @@
   <%= f.label "Non"  %></div>
 
 
-  <div class = "cards-question"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="l'euthanasie consiste en..."><i class="fa fa-circle-info me-1"></i> L'euthanasie doit être autorisée?</div>
+  <div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="l'euthanasie consiste en..."><i class="fa fa-circle-info me-1"></i> L'euthanasie doit être autorisée?</div>
 
 
 
@@ -238,7 +236,7 @@
   <%= f.label "Non"  %></div>
 
 <%= link_to root_path do %>
-  <%= f.submit %>
+  <%= f.submit class: 'btn ' %>
 <% end %>
 
 <% end %>
