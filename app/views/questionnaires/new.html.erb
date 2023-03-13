@@ -7,7 +7,6 @@
 
 <div class = "cards-question">Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
 
-
 <div class= "cards-reponse">
   <%= f.radio_button :reponse1, 1 %>
   <%= f.label "Il faut mieux les accueillir" %></div>
@@ -19,9 +18,10 @@
   <%= f.label "Il faut favoriser les expulsions"  %></div>
 
 
+ <div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Alors que l'entreprise publique assure des missions de service public pour satisfaire l'intérêt général, l'entreprise privée produit ou vend des biens ou des services avec pour finalité de réaliser des bénéfices tout en cherchant à assurer sa pérennité."><i class="fa fa-circle-info me-1"></i> Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
 
 
-<div class = "cards-question">Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché</div>
+<%# <div class = "cards-question">Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché</div> %>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse2, 1 %>
   <%= f.label "Oui" %></div>
@@ -59,7 +59,9 @@
   <%= f.radio_button :response4, 3 %>
   <%= f.label "Non"  %></div>
 
-  <div class = "cards-question">Quelle approche faut il avoir sur la durée du temps de travail hebdomadaire?</div>
+
+<div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Le temps de travail moyen actuel en France est de 35h rapartis dur 5 jours"><i class="fa fa-circle-info me-1"></i> Quelle approche faut il avoir sur la durée du temps de travail hebdomadaire?</div>
+  <%# <div class = "cards-question">Quelle approche faut il avoir sur la durée du temps de travail hebdomadaire?</div> %>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse5, 1 %>
   <%= f.label "Il faut le réduire" %></div>
@@ -70,7 +72,9 @@
   <%= f.radio_button :reponse5, 3 %>
   <%= f.label "il ne faut pas le modifier"  %></div>
 
-  <div class = "cards-question">Etes vous favorable à une revalorisation du smic?</div>
+<div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Le montant actuel du SMIC s'eleve a 1709,28€ soit 1353€ net."><i class="fa fa-circle-info me-1"></i> Etes vous favorable à une revalorisation du smic?</div>
+
+  <%# <div class = "cards-question">Etes vous favorable à une revalorisation du smic?</div> %>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse6, 1 %>
   <%= f.label "Oui au moins a 1400€" %></div>
@@ -92,7 +96,10 @@
   <%= f.radio_button :reponse7, 3 %>
   <%= f.label "Non"  %></div>
 
-  <div class = "cards-question">Que faire pour augmenter le pouvoir d'achat?</div>
+
+<div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Le pouvoir d'achat correspond au volume de biens et services qu'un revenu permet d'acheter."><i class="fa fa-circle-info me-1"></i> Que faire pour augmenter le pouvoir d'achat?</div>
+
+  <%# <div class = "cards-question">Que faire pour augmenter le pouvoir d'achat?</div> %>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse8, 1 %>
   <%= f.label "Augmenter les salaires" %></div>
@@ -125,7 +132,10 @@
   <%= f.radio_button :reponse10, 3 %>
   <%= f.label "augmenter modérément les salaires"  %></div>
 
-  <div class = "cards-question">Les aides sociales dissuadent de travailler?</div>
+  <%# <div class = "cards-question">Les aides sociales dissuadent de travailler?</div> %>
+  <div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="L'aide sociale se définit comme l'ensemble des prestations constituant une obligation mise à la charge des collectivités publiques, notamment du Département et destinées à faire face à un état de besoin pour des personnes dans l'impossibilité d'y pourvoir.
+"><i class="fa fa-circle-info me-1"></i> Les aides sociales dissuadent de travailler?</div>
+
 <div class= "cards-reponse">
   <%= f.radio_button :reponse11, 1 %>
   <%= f.label "Oui" %></div>
@@ -136,7 +146,7 @@
   <%= f.radio_button :reponse11, 3 %>
   <%= f.label "Non"  %></div>
 
-  <div class = "cards-question">Les peines lourdes sont efficaces car elles sont dissuasives.</div>
+  <div class = "cards-question">Les peines de prison lourdes sont efficaces car elles sont dissuasives.</div>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse12, 1 %>
   <%= f.label "Oui" %></div>
@@ -158,7 +168,9 @@
   <%= f.radio_button :reponse13, 3 %>
   <%= f.label "Non"  %></div>
 
-  <div class = "cards-question">Doit on construire de nouveaux reacteurs nucleaires</div>
+  <%# <div class = "cards-question">Doit on construire de nouveaux reacteurs nucleaires</div> %>
+  <div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="En France il y a actuellement 26 reacteurs nucleaires en fonctions sur les 56 se trouvant sur le territoire francais"><i class="fa fa-circle-info me-1"></i> Doit on construire de nouveaux reacteurs nucleaires?</div>
+
 <div class= "cards-reponse">
   <%= f.radio_button :reponse14, 1 %>
   <%= f.label "Oui" %></div>
