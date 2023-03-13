@@ -7,4 +7,8 @@ class PagesController < ApplicationController
 
   def glossaire
   end
+
+  def check_list
+  end
+  
 end
