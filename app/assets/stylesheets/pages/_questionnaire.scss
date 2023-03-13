@@ -13,7 +13,7 @@ h1{
 background-color: #BF3737;
 // color: white;
 border-radius: 4px;
-width: 50vw;
+width: 55vw;
 margin-bottom: 15px;
 margin-top: 25px;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -26,7 +26,7 @@ text-align: center;
   justify-content: center;
   display:flex;
   background-color: rgb(197, 197, 197);
-  width: 35vw;
+  width: 40vw;
   border-radius: 4px;
   margin-bottom: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -35,9 +35,21 @@ text-align: center;
   transition: transform .1s;
 
 }
-.btn{
-  background-color: #BF3737;
+html{
+  --checked-color: #ff5722;
 }
+input[type="radio"] {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+input,
+label {
+    cursor: pointer;
+}
+// .btn{
+//   background-color: #BF3737;
+// }
 
 // .cards-reponse input[type='radio'] {
 //   display: none;
@@ -55,11 +67,4 @@ align-items: center;
 
 // input[type="radio"]{
 //   display: none;
-// }
-input[type="radio"]:checked+label{
-
-   background-color: #BF3737;
-  }
-// .cards-reponse::after{
-//   background-color: #BF3737;
 // }
