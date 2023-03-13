@@ -1,6 +1,6 @@
 <div class="container">
 
-<h1>Pas de panique ce questionnaire ne te prendra que 5 minutes!</h1>
+<h1>Pas de panique ce questionnaire ne te prendra que 5 minutes!😮‍💨</h1>
 
 <%= form_with model: @questionnaire do |f| %>
 
@@ -8,6 +8,7 @@
 <div class = "cards-question">Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
 
 <div class= "cards-reponse">
+<input type="radio">
   <%= f.radio_button :reponse1, 1 %>
   <%= f.label "Il faut mieux les accueillir" %></div>
   <div class= "cards-reponse">
@@ -45,7 +46,7 @@
   <%= f.label "Non"  %></div>
 
 
-  <div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="l'euthanasie consiste en..."><i class="fa fa-circle-info me-1"></i> L'euthanasie doit être autorisée?</div>
+  <div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Usage des procédés qui permettent de hâter ou de provoquer la mort de malades incurables qui souffrent et souhaitent mourir."><i class="fa fa-circle-info me-1"></i> L'euthanasie doit être autorisée?</div>
 
 
 
@@ -192,6 +193,8 @@
   <%= f.radio_button :reponse15, 3 %>
   <%= f.label "Non"  %></div>
 
+
+
   <div class = "cards-question"></div>
 <div class= "cards-reponse">
   <%= f.radio_button :reponse16, 1 %>
@@ -249,10 +252,18 @@
 
 <%= link_to root_path do %>
   <%= f.submit class: 'btn ' %>
-<% end %>
 
 <% end %>
 
+<% end %>
+
+ <p>Select your favorite programming language:</p>
+    <div>
+       <div class="cards-reponse"> <label><input type="radio" name="language" value="java">Java</label></div>
+        <label><input type="radio" name="language" value="cpp">C++</label>
+        <label><input type="radio" name="language" value="python">Python</label>
+    </div>
+    <button id="submit">Submit</button>
 
 
 </div>
