@@ -128,7 +128,7 @@ class QuestionnairesController < ApplicationController
     end
 
     if params["questionnaire"]["reponse12"]  == "1"
-      @extreme_gauche.compteur += 1
+      @extreme_gauche.compteur += 11
       @extreme_droite.compteur += 1
     elsif params["questionnaire"]["reponse12"]  == "2"
       @gauche.compteur += 1
@@ -145,7 +145,6 @@ class QuestionnairesController < ApplicationController
 
 
 
-
-    raise
+    redirect_to root_path
   end
 end

@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :questionnaires
   resources :candidats
   get "/check_list", to: "pages#check_list", as: 'check_list'
+  get "/glossaire", to: "pages#glossaire", as: 'glossaire'
 end
