@@ -4,4 +4,7 @@ class PagesController < ApplicationController
     @candidats = Candidat.all
     @winner = @candidats.sort_by{ |candidat| candidat.compteur}.last
   end
+
+  def glossaire
+  end
 end
