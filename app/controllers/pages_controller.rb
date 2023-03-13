@@ -3,4 +3,8 @@ class PagesController < ApplicationController
   def home
     @candidats = Candidat.all
   end
+
+  def check_list
+  end
+  
 end
