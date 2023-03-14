@@ -1,18 +1,31 @@
+h1{
+  color: #BF3737;
+  // text-shadow: #BF3737;
+  margin-top: 36px;
+  margin-right:90px;
+
+  }
+.check_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+
 .card-check {
   display: flex;
   flex-direction: column;
   margin: 3px;
   background-color: transparent;
+  // text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
   border-color: transparent;
   justify-content: space-evenly;}
 
   .btn-check{
     border-radius: 100%;
   }
-// .h1 {
-//   color: #ff0000;
-//     text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
-//   }
+
 
 // .try {
 //   padding: 5px;
