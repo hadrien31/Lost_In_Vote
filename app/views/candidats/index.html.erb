@@ -1,21 +1,22 @@
-<ul class="list-group ">
-  <% @candidats.each do |candidat| %>
-    <li class="list-group-item">
-      <div class=" list-avatars">
-        <%= link_to candidat_path(candidat) do %>
-          <%= cl_image_tag candidat.photo.key, class: "avatar-list" %>
+<div class="card">
+  <ul class="list-group ">
+    <% @candidats.each do |candidat| %>
+      <li class="list-group-item">
+        <div class=" list-avatars">
+          <%= link_to candidat_path(candidat) do %>
+            <%= cl_image_tag candidat.photo.key, class: "avatar-list" %>
           <%end%>
           <div class="fw-bold text-center">
-          <%= candidat.first_name.upcase %>
-
-           <%= candidat.last_name.upcase %>
-           <br>
-        <%= candidat.partie %>
-
-         </div>
-    </li>
-<%end%>
-</ul>
+            <%= candidat.first_name.upcase %>
+            <%= candidat.last_name.upcase %>
+            <br>
+            <%= candidat.partie %>
+          </div>
+        </div>
+      </li>
+    <%end%>
+  </ul>
+</div>
 <%# img-fluid object-fit w-300 p-3 %>
  <%# align-items-start %>
   <%# d-flex justify-content-between %>
