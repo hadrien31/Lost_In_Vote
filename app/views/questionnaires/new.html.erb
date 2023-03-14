@@ -1,7 +1,8 @@
 <div class="container">
 
-<h1 class="title-quest">Pas de panique ce questionnaire ne te prendra que 5 minutes!😮‍💨</h1>
+<%# <h1 class="ml2" data-controller="questions">Pas de panique ce questionnaire ne te prendra que 5 minutes!😮‍💨</h1> %>
 
+<p class="ml2"><span data-controller="typed-js"></span></p>
 <%= form_with model: @questionnaire do |f| %>
 
   <%= render 'questionnaires/question',
