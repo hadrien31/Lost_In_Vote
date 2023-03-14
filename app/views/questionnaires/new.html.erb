@@ -4,28 +4,33 @@
 
 <%= form_with model: @questionnaire do |f| %>
 
+  <%= render 'questionnaires/question',
+    question_tooltip: "Alors que l'entreprise publique assure des missions de service public pour satisfaire l'intérêt général, l'entreprise privée produit ou vend des biens ou des services avec pour finalité de réaliser des bénéfices tout en cherchant à assurer sa pérennité.",
+    question: "Quelles sont les mesures a prendre vis a vis de l'immigration ? (V1)",
+    name: "reponse1",
+    reponses: [
+      {label: "Oui", value: 1},
+      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Non", value: 3}
+    ]
+  %>
 
-<div class = "cards-question">Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
-
-<div class= "cards-reponse">
-<input type="radio">
-  <%= f.radio_button :reponse1, 1 %>
-  <%= f.label "Il faut mieux les accueillir" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse1, 2 %>
-  <%= f.label "Il faut durcir l'accès au titre de séjour" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse1, 3 %>
-  <%= f.label "Il faut favoriser les expulsions"  %></div>
-
-
- <div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Alors que l'entreprise publique assure des missions de service public pour satisfaire l'intérêt général, l'entreprise privée produit ou vend des biens ou des services avec pour finalité de réaliser des bénéfices tout en cherchant à assurer sa pérennité."><i class="fa fa-circle-info me-1"></i> Quelles sont les mesures a prendre vis a vis de l'immigration?</div>
+ <div
+    class="cards-question title"
+    data-controller="tooltip"
+    data-bs-toggle="tooltip"
+    data-bs-placement="top"
+    title="Alors que l'entreprise publique assure des missions de service public pour satisfaire l'intérêt général, l'entreprise privée produit ou vend des biens ou des services avec pour finalité de réaliser des bénéfices tout en cherchant à assurer sa pérennité.">
+    <i class="fa fa-circle-info me-1"></i>
+    Quelles sont les mesures a prendre vis a vis de l'immigration?
+  </div>
 
 
 <%# <div class = "cards-question">Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché</div> %>
 <div class= "cards-reponse">
-  <%= f.radio_button :reponse2, 1 %>
-  <%= f.label "Oui" %></div>
+
+  <%= f.radio_button :reponse2, 1, id: "reponse21"%>
+  <%= f.label "Oui", for: "reponse21" %></div>
   <div class= "cards-reponse">
   <%= f.radio_button :reponse2, 2 %>
   <%= f.label "Je n'ai pas d'avis" %></div>
