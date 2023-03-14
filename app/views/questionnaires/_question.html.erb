@@ -11,7 +11,7 @@
   <div class="<%= name %>-wrapper">
     <% reponses.each do |r| %>
       <div class="category-item">
-        <input class="form-check-input radio_buttons required category-selector" data-style="ruby" type="radio" value="<%= r[:value] %>" name="<%= name %>" id="<%= name %>_<%= r[:value] %>">
+        <input class="form-check-input radio_buttons required category-selector" data-style="ruby" type="radio" value="<%= r[:value] %>" name="[questionnaire]<%= name %>" id="<%= name %>_<%= r[:value] %>">
         <label class="form-check-label collection_radio_buttons" for="<%= name %>_<%= r[:value] %>"><%= r[:label] %></label>
       </div>
     <% end %>
