@@ -10,5 +10,11 @@ application.register("candidats-card", CandidatsCardController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import QuestionsController from "./questions_controller"
+application.register("questions", QuestionsController)
+
 import TooltipController from "./tooltip_controller"
 application.register("tooltip", TooltipController)
+
+import TypedJsController from "./typed_js_controller"
+application.register("typed-js", TypedJsController)
