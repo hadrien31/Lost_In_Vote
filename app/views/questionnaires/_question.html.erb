@@ -1,0 +1,19 @@
+<fieldset class="form-group radio_buttons required snippet_category">
+  <div
+      class="cards-question title"
+      data-controller="tooltip"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="<%= question_tooltip %>">
+      <i class="fa fa-circle-info me-1"></i>
+      <%= question %>
+    </div>
+  <div class="<%= name %>-wrapper">
+    <% reponses.each do |r| %>
+      <div class="category-item">
+        <input class="form-check-input radio_buttons required category-selector" data-style="ruby" type="radio" value="<%= r[:value] %>" name="<%= name %>" id="<%= name %>_<%= r[:value] %>">
+        <label class="form-check-label collection_radio_buttons" for="<%= name %>_<%= r[:value] %>"><%= r[:label] %></label>
+      </div>
+    <% end %>
+  </div>
+</fieldset>

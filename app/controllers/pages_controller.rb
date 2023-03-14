@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
   def home
     @candidats = Candidat.all
-    @winner = @candidats.sort_by{ |candidat| candidat.compteur}.last
+    @winner = Candidat.winner_for(current_user)
   end
 
   def glossaire
@@ -10,5 +10,5 @@ class PagesController < ApplicationController
 
   def check_list
   end
-  
+
 end
