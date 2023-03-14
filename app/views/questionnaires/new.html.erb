@@ -1,13 +1,23 @@
 <div class="container">
 
-<h1>Pas de panique ce questionnaire ne te prendra que 5 minutes!😮‍💨</h1>
+<h1 class="title-quest">Pas de panique ce questionnaire ne te prendra que 5 minutes!😮‍💨</h1>
 
 <%= form_with model: @questionnaire do |f| %>
 
   <%= render 'questionnaires/question',
     question_tooltip: "Alors que l'entreprise publique assure des missions de service public pour satisfaire l'intérêt général, l'entreprise privée produit ou vend des biens ou des services avec pour finalité de réaliser des bénéfices tout en cherchant à assurer sa pérennité.",
-    question: "Quelles sont les mesures a prendre vis a vis de l'immigration ? (V1)",
+    question: "Quelles sont les mesures a prendre vis a vis de l'immigration ?",
     name: "reponse1",
+    reponses: [
+      {label: "Il faut mieux les accueillir", value: 1},
+      {label: "Il faut durcir l'accès au titre de séjour", value: 2},
+      {label: "Il faut favoriser les expulsions", value: 3}
+    ]
+  %>
+<%= render 'questionnaires/question',
+    question_tooltip: "Alors que l'entreprise publique assure des missions de service public pour satisfaire l'intérêt général, l'entreprise privée produit ou vend des biens ou des services avec pour finalité de réaliser des bénéfices tout en cherchant à assurer sa pérennité.",
+    question: "Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché",
+    name: "reponse2",
     reponses: [
       {label: "Oui", value: 1},
       {label: "Je n'ai pas d'avis", value: 2},
@@ -15,259 +25,165 @@
     ]
   %>
 
- <div
-    class="cards-question title"
-    data-controller="tooltip"
-    data-bs-toggle="tooltip"
-    data-bs-placement="top"
-    title="Alors que l'entreprise publique assure des missions de service public pour satisfaire l'intérêt général, l'entreprise privée produit ou vend des biens ou des services avec pour finalité de réaliser des bénéfices tout en cherchant à assurer sa pérennité.">
-    <i class="fa fa-circle-info me-1"></i>
-    Quelles sont les mesures a prendre vis a vis de l'immigration?
-  </div>
+<%= render 'questionnaires/question',
+    question_tooltip: "Alors que l'entreprise publique assure des missions de service public pour satisfaire l'intérêt général, l'entreprise privée produit ou vend des biens ou des services avec pour finalité de réaliser des bénéfices tout en cherchant à assurer sa pérennité.",
+    question: "Nous devons accepter de changer notre mode de consommation alimentaire pour limiter l'exploitation de la nature",
+    name: "reponse3",
+    reponses: [
+      {label: "Oui", value: 1},
+      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Non", value: 3}
+    ]
+  %>
 
 
-<%# <div class = "cards-question">Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché</div> %>
-<div class= "cards-reponse">
+<%= render 'questionnaires/question',
+    question_tooltip: "Usage des procédés qui permettent de hâter ou de provoquer la mort de malades incurables qui souffrent et souhaitent mourir.",
+    question: "L'euthanasie doit être autorisée?",
+    name: "reponse4",
+    reponses: [
+      {label: "Oui", value: 1},
+      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Non", value: 3}
+    ]
+  %>
 
-  <%= f.radio_button :reponse2, 1, id: "reponse21"%>
-  <%= f.label "Oui", for: "reponse21" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse2, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse2, 3 %>
-  <%= f.label "Non"  %></div>
+ <%= render 'questionnaires/question',
+    question_tooltip: "Le temps de travail moyen actuel en France est de 35h rapartis dur 5 jours",
+    question: "Quelle approche faut il avoir sur la durée du temps de travail hebdomadaire?",
+    name: "reponse5",
+    reponses: [
+      {label: "Oui", value: 1},
+      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Non", value: 3}
+    ]
+  %>
 
+<%= render 'questionnaires/question',
+    question_tooltip: "Le montant actuel du SMIC s'eleve a 1709,28€ soit 1353€ net.",
+    question: "Etes vous favorable à une revalorisation du smic?",
+    name: "reponse6",
+    reponses: [
+      {label: "Oui", value: 1},
+      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Non", value: 3}
+    ]
+  %>
 
-<div class = "cards-question"> Nous devons accepter de changer notre mode de consommation alimentaire pour limiter l'exploitation de la nature</div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse3, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse3, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse3, 3 %>
-  <%= f.label "Non"  %></div>
+<%= render 'questionnaires/question',
+    question_tooltip: "",
+    question: "Le cannabis doit il être légalisé?",
+    name: "reponse7",
+    reponses: [
+      {label: "Oui", value: 1},
+      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Non", value: 3}
+    ]
+  %>
 
+<%= render 'questionnaires/question',
+    question_tooltip: "Le pouvoir d'achat correspond au volume de biens et services qu'un revenu permet d'acheter.",
+    question: "Que faire pour augmenter le pouvoir d'achat?",
+    name: "reponse8",
+    reponses: [
+      {label: "Oui", value: 1},
+      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Non", value: 3}
+    ]
+  %>
 
-  <div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Usage des procédés qui permettent de hâter ou de provoquer la mort de malades incurables qui souffrent et souhaitent mourir."><i class="fa fa-circle-info me-1"></i> L'euthanasie doit être autorisée?</div>
+<%= render 'questionnaires/question',
+    question_tooltip: "Quel priorité s'impose sur le ferroviaire?",
+    question: "Quel priorité s'impose sur le ferroviaire?",
+    name: "reponse9",
+    reponses: [
+      {label: "Oui", value: 1},
+      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Non", value: 3}
+    ]
+  %>
 
-
-
-  <div class= "cards-reponse">
-  <%= f.radio_button :response4, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :response4, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :response4, 3 %>
-  <%= f.label "Non"  %></div>
-
-
-<div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Le temps de travail moyen actuel en France est de 35h rapartis dur 5 jours"><i class="fa fa-circle-info me-1"></i> Quelle approche faut il avoir sur la durée du temps de travail hebdomadaire?</div>
-  <%# <div class = "cards-question">Quelle approche faut il avoir sur la durée du temps de travail hebdomadaire?</div> %>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse5, 1 %>
-  <%= f.label "Il faut le réduire" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse5, 2 %>
-  <%= f.label "il faut le liberaliser" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse5, 3 %>
-  <%= f.label "il ne faut pas le modifier"  %></div>
-
-<div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Le montant actuel du SMIC s'eleve a 1709,28€ soit 1353€ net."><i class="fa fa-circle-info me-1"></i> Etes vous favorable à une revalorisation du smic?</div>
-
-  <%# <div class = "cards-question">Etes vous favorable à une revalorisation du smic?</div> %>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse6, 1 %>
-  <%= f.label "Oui au moins a 1400€" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse6, 2 %>
-  <%= f.label "je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse6, 3 %>
-  <%= f.label "Non"  %></div>
-
-  <div class = "cards-question">Le cannabis doit il être légalisé?</div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse7, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse7, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse7, 3 %>
-  <%= f.label "Non"  %></div>
-
-
-<div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="Le pouvoir d'achat correspond au volume de biens et services qu'un revenu permet d'acheter."><i class="fa fa-circle-info me-1"></i> Que faire pour augmenter le pouvoir d'achat?</div>
-
-  <%# <div class = "cards-question">Que faire pour augmenter le pouvoir d'achat?</div> %>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse8, 1 %>
-  <%= f.label "Augmenter les salaires" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse8, 2 %>
-  <%= f.label "Alleger les impôts" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse8, 3 %>
-  <%= f.label "Verser une prime"  %></div>
-
-  <div class = "cards-question">Quel priorité s'impose sur le ferroviaire?</div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse9, 1 %>
-  <%= f.label "Baisser le tarif des billets ou favoriser la gratuité dans certains cas" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse9, 2 %>
-  <%= f.label "Prioriser les trains du quotidien" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse9, 3 %>
-  <%= f.label "Il ne faut rien faire tout va bien🙈"  %></div>
-
-  <div class = "cards-question">Quel est la mesure pour revaloriser le metier d'enseignant?</div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse10, 1 %>
-  <%= f.label "augmenter drastiquement les salaires" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse10, 2 %>
-  <%= f.label "Augmenter les moyens" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse10, 3 %>
-  <%= f.label "augmenter modérément les salaires"  %></div>
-
-  <%# <div class = "cards-question">Les aides sociales dissuadent de travailler?</div> %>
-  <div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="L'aide sociale se définit comme l'ensemble des prestations constituant une obligation mise à la charge des collectivités publiques, notamment du Département et destinées à faire face à un état de besoin pour des personnes dans l'impossibilité d'y pourvoir.
-"><i class="fa fa-circle-info me-1"></i> Les aides sociales dissuadent de travailler?</div>
-
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse11, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse11, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse11, 3 %>
-  <%= f.label "Non"  %></div>
-
-  <div class = "cards-question">Les peines de prison lourdes sont efficaces car elles sont dissuasives.</div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse12, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse12, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse12, 3 %>
-  <%= f.label "Non"  %></div>
-
-  <div class = "cards-question">Il est légitime pour un pays d'intervenir militairement à l'étranger pour défendre ses intérêts économiques</div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse13, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse13, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse13, 3 %>
-  <%= f.label "Non"  %></div>
-
-  <%# <div class = "cards-question">Doit on construire de nouveaux reacteurs nucleaires</div> %>
-  <div class = "cards-question title"  data-controller="tooltip" data-bs-toggle="tooltip" data-bs-placement="top" title="En France il y a actuellement 26 reacteurs nucleaires en fonctions sur les 56 se trouvant sur le territoire francais"><i class="fa fa-circle-info me-1"></i> Doit on construire de nouveaux reacteurs nucleaires?</div>
-
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse14, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse14, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse14, 3 %>
-  <%= f.label "Non"  %></div>
-
-  <div class = "cards-question">Les jeunes de moins de 30 ans doivent ils être exonéré d'impôt</div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse15, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse15, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse15, 3 %>
-  <%= f.label "Non"  %></div>
+<%= render 'questionnaires/question',
+    question_tooltip: "",
+    question: "Quel est la mesure pour revaloriser le metier d'enseignant?",
+    name: "reponse10",
+    reponses: [
+      {label: "augmenter drastiquement les salaires", value: 1},
+      {label: "Augmenter les moyens", value: 2},
+      {label: "augmenter modérément les salaires", value: 3}
+    ]
+  %>
 
 
+ <%= render 'questionnaires/question',
+    question_tooltip: "L'aide sociale se définit comme l'ensemble des prestations constituant une obligation mise à la charge des collectivités publiques, notamment du Département et destinées à faire face à un état de besoin pour des personnes dans l'impossibilité d'y pourvoir.",
+    question: "Les aides sociales dissuadent de travailler?",
+    name: "reponse11",
+    reponses: [
+      {label: "augmenter drastiquement les salaires", value: 1},
+      {label: "Augmenter les moyens", value: 2},
+      {label: "augmenter modérément les salaires", value: 3}
+    ]
+  %>
 
-  <div class = "cards-question"></div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse16, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse16, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse16, 3 %>
-  <%= f.label "Non"  %></div>
+<%= render 'questionnaires/question',
+    question_tooltip: "",
+    question: "Les peines de prison lourdes sont efficaces car elles sont dissuasives",
+    name: "reponse12",
+    reponses: [
+      {label: "augmenter drastiquement les salaires", value: 1},
+      {label: "Augmenter les moyens", value: 2},
+      {label: "augmenter modérément les salaires", value: 3}
+    ]
+  %>
 
-  <div class = "cards-question"></div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse17, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse17, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse17, 3 %>
-  <%= f.label "Non"  %></div>
+  <%= render 'questionnaires/question',
+    question_tooltip: "",
+    question: "Il est légitime pour un pays d'intervenir militairement à l'étranger pour défendre ses intérêts économiques",
+    name: "reponse13",
+    reponses: [
+      {label: "augmenter drastiquement les salaires", value: 1},
+      {label: "Augmenter les moyens", value: 2},
+      {label: "augmenter modérément les salaires", value: 3}
+    ]
+  %>
 
-  <div class = "cards-question"></div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse18, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse18, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse18, 3 %>
-  <%= f.label "Non"  %></div>
+  <%= render 'questionnaires/question',
+    question_tooltip: "",
+    question: "Il est légitime pour un pays d'intervenir militairement à l'étranger pour défendre ses intérêts économiques",
+    name: "reponse14",
+    reponses: [
+      {label: "augmenter drastiquement les salaires", value: 1},
+      {label: "Augmenter les moyens", value: 2},
+      {label: "augmenter modérément les salaires", value: 3}
+    ]
+  %>
 
-  <div class = "cards-question"></div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse19, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse19, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse19, 3 %>
-  <%= f.label "Non"  %></div>
-
-  <div class = "cards-question"></div>
-<div class= "cards-reponse">
-  <%= f.radio_button :reponse20, 1 %>
-  <%= f.label "Oui" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse20, 2 %>
-  <%= f.label "Je n'ai pas d'avis" %></div>
-  <div class= "cards-reponse">
-  <%= f.radio_button :reponse20, 3 %>
-  <%= f.label "Non"  %></div>
+  <%= render 'questionnaires/question',
+    question_tooltip: "En France il y a actuellement 26 reacteurs nucleaires en fonctions sur les 56 se trouvant sur le territoire francais",
+    question: "Doit on construire de nouveaux reacteurs nucleaires?",
+    name: "reponse15",
+    reponses: [
+      {label: "augmenter drastiquement les salaires", value: 1},
+      {label: "Augmenter les moyens", value: 2},
+      {label: "augmenter modérément les salaires", value: 3}
+    ]
+  %>
 
 
-  <%= f.submit class: 'btn ' %>
-
+<div class="btn-quest">
+  <%= f.submit class: 'bouton-quest ' %>
+</div>
 
 <% end %>
 
- <p>Select your favorite programming language:</p>
+ <%# <p>Select your favorite programming language:</p>
     <div>
        <div class="cards-reponse"> <label><input type="radio" name="language" value="1">Java</label></div>
         <label><input type="radio" name="language" value="2">C++</label>
         <label><input type="radio" name="language" value="3">Python</label>
     </div>
-    <button id="submit">Submit</button>
+    <button id="submit">Submit</button> %>
 
 
 </div>
