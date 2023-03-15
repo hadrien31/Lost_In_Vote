@@ -149,7 +149,7 @@ class QuestionnairesController < ApplicationController
     @winner = Candidat.winner_for_rank(current_user, 1)
     @second = Candidat.winner_for_rank(current_user, 2)
     @third = Candidat.winner_for_rank(current_user, 3)
-
+    
 
 
     redirect_to root_path

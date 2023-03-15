@@ -40,6 +40,7 @@ margin-top: 25px;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 text-align: center;
 border: none;
+align-items: baseline;
 }
 
 
@@ -125,9 +126,4 @@ justify-content: center;
 #snippet_category_css:checked + label {
   background-color: #62DDF5;
   border-color: #62DDF5;
-}
-
-.fa{
-
-
 }

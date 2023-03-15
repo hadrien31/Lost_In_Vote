@@ -49,4 +49,12 @@ class Candidat < ApplicationRecord
     return scores_sorted[-3].candidat
   end
 
+    def percent
+      scores = Candidat.all.map do |candidat|
+        Score.find_by(candidat: candidat, user: user)
+      end.compact
+      return nil if scores.length < 5
+      percent = scores / 12 * 100
+    end
+
 end
