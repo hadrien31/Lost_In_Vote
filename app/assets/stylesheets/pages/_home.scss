@@ -40,7 +40,7 @@
  }
 
  //------------------------------------------------------------------------
- 
+
 .button-30 {
   align-items: center;
   appearance: none;
@@ -75,7 +75,7 @@
 .button-30:hover {
   color: white;
 }
- 
+
  //------------------------------------------------------------------------
 
  hr {
@@ -205,7 +205,7 @@ body {
     justify-content: center;
     perspective: 300px;
   }
-  
+
   &__item {
     display: flex;
     align-items: center;
@@ -218,42 +218,41 @@ body {
     box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
     position: absolute;
     transition: all .3s ease-in;
-    
+
     &[data-pos="0"] {
       z-index: 5;
     }
-    
+
     &[data-pos="-1"],
     &[data-pos="1"] {
       opacity: 0.7;
       filter: blur(1px) grayscale(10%);
     }
-    
+
     &[data-pos="-1"] {
       transform: translateX(-40%) scale(.9);
       z-index: 4;
     }
-    
+
     &[data-pos="1"] {
       transform: translateX(40%) scale(.9);
       z-index: 4;
     }
-    
+
     &[data-pos="-2"],
     &[data-pos="2"] {
       opacity: 0.4;
       filter: blur(3px) grayscale(20%);
     }
-    
+
     &[data-pos="-2"] {
       transform: translateX(-70%) scale(.8);
       z-index: 3;
     }
-    
+
     &[data-pos="2"] {
       transform: translateX(70%) scale(.8);
       z-index: 3;
     }
   }
-}
-
+}}
