@@ -1,12 +1,37 @@
+.title {
+    color: white;
+    justify-content: center;
+    border: white solid 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    // background-color: white;
+    // opacity: 50%;
+}
+// 23274E
 ul {
     list-style: none;
+    padding-left: 0px;
+}
+
+h4 {
+    border: #BF3737 solid 2px;
+    text-align: center;
+    padding: 2px;
+    background-color: #BF3737;
+    opacity: 90%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 h5 {
-    text-decoration: underline #BF3737;
+    // text-decoration: underline #BF3737;
+    color: #BF3737;
+    margin-bottom: 0px;
 }
 
 .hr_list_glossaire {
     border-top: 5px solid white;
     color: white;
+}
+
+.word_definition {
+    padding: 0px;
 }
