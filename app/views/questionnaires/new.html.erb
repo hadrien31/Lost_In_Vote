@@ -1,8 +1,8 @@
 <div class="container">
 
-<%# <h1 class="ml2" data-controller="questions">Pas de panique ce questionnaire ne te prendra que 5 minutes!😮‍💨</h1> %>
-
-<p class="ml2"><span data-controller="typed-js"></span></p>
+<h1 class="ml2">Pas de panique ce questionnaire ne te prendra que 5 minutes!😮‍💨</h1>
+<%# <h1 class="kl">KOH-LANTA ADVENTURE</h1> %>
+<%# <p class="ml2"><span data-controller="typed-js"></span></p> %>
 <%= form_with model: @questionnaire do |f| %>
 
   <%= render 'questionnaires/question',
@@ -10,7 +10,7 @@
     question: "Quelles sont les mesures a prendre vis a vis de l'immigration ?",
     name: "reponse1",
     reponses: [
-      {label: "Il faut mieux les accueillir", value: 1},
+      {label: "Il faut mieux les accueillir", value: 1, },
       {label: "Il faut durcir l'accès au titre de séjour", value: 2},
       {label: "Il faut favoriser les expulsions", value: 3}
     ]
@@ -178,13 +178,6 @@
 
 <% end %>
 
- <%# <p>Select your favorite programming language:</p>
-    <div>
-       <div class="cards-reponse"> <label><input type="radio" name="language" value="1">Java</label></div>
-        <label><input type="radio" name="language" value="2">C++</label>
-        <label><input type="radio" name="language" value="3">Python</label>
-    </div>
-    <button id="submit">Submit</button> %>
 
 
 </div>
