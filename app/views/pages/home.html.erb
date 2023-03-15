@@ -41,32 +41,3 @@
     <% end %>
 </div>
 
-<div class="carousel">
-  <ul class="carousel__list" data-controller="candidats-card" data-action="click->candidats-card#moveCard">
-    <% @candidats.each_with_index do |candidat, index| %>
-
-        <% if index == 0 %>
-            <div class="carousel__item" data-pos="-2">
-                <%= cl_image_tag candidat.photo.key, class: "image_candidat --from-carousel" %>
-            </div>
-
-        <% elsif index == 1 %>
-            <div class="carousel__item" data-pos="-1">
-                <%= cl_image_tag candidat.photo.key, class: "image_candidat --from-carousel" %>
-            </div>
-        <% elsif index == 2 %>
-            <div class="carousel__item" data-pos="0">
-                <%= cl_image_tag candidat.photo.key, class: "image_candidat --from-carousel" %>
-            </div>
-        <% elsif index == 3 %>
-            <div class="carousel__item" data-pos="1">
-                <%= cl_image_tag candidat.photo.key, class: "image_candidat --from-carousel" %>
-            </div>
-        <% elsif index == 4 %>
-            <div class="carousel__item" data-pos="2">
-                <%= cl_image_tag candidat.photo.key, class: "image_candidat --from-carousel" %>
-            </div>
-        <% end %>
-    <% end %>
-  </ul>
-</div>
