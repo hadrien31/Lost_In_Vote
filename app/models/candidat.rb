@@ -16,7 +16,15 @@ class Candidat < ApplicationRecord
     # ou prend le plus haut score
     scores_sorted = scores.sort_by(&:value)
     # on recupère le candidat correspondant
-    return scores_sorted[- rank].candidat
+    candidat = scores_sorted[- rank].candidat
+    score = Score.find_by(candidat: candidat, user: user)
+    purcent = (score.value * 100) / 12
+
+    return {
+      candidat: candidat,
+      score: score,
+      purcent: purcent
+    }
   end
 
   def self.second_for(user)
@@ -48,13 +56,4 @@ class Candidat < ApplicationRecord
     # on recupère le candidat correspondant
     return scores_sorted[-3].candidat
   end
-
-    def percent
-      scores = Candidat.all.map do |candidat|
-        Score.find_by(candidat: candidat, user: user)
-      end.compact
-      return nil if scores.length < 5
-      percent = scores / 12 * 100
-    end
-
 end

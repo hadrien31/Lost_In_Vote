@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     @winner = Candidat.winner_for_rank(current_user, 1)
     @second = Candidat.winner_for_rank(current_user, 2)
     @third = Candidat.winner_for_rank(current_user, 3)
+    
   end
 
   def glossaire
