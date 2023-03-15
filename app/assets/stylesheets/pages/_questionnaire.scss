@@ -41,31 +41,17 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 text-align: center;
 }
 
-.ml2 {
-  font-weight: 900;
-  font-size: 3.5em;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
 
-.ml2 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
 .category-item:hover{
 
   transform: scale(1.1);
   }
 .title{
   display: flex;
-align-items: center;
+justify-content: center;
 }
 
 
-// input[type="radio"]{
-//   display: none;
-// }
 
 .category-wrapper {
   display: flex;
@@ -139,5 +125,3 @@ align-items: center;
   background-color: #62DDF5;
   border-color: #62DDF5;
 }
-
-
