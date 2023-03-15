@@ -6,6 +6,50 @@
     <% if @winner %>
         <a href="/questionnaires/new" class="button-30">Refaire le test</a>
         <hr>
+
+        <h2 class="title-homepage">Candidat vous correpondant</h2>
+        <div class="card">
+            <%# winner %>
+            <%= link_to candidat_path(@candidats), :action => 'go' do %>
+                <div class="container_card">
+                    <%= cl_image_tag @winner.photo.key, class: "image_candidat" %>
+                    <div class="container__profile">
+                        <div class="container__profile__text">
+                            <h2><%= @winner.first_name %> <%= @winner.last_name.upcase() %></h2>
+                            <p><%= @winner.partie %></p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="classement">1er</h3>
+            <% end %>
+            <%# second %>
+            <%= link_to candidat_path(@candidats), :action => 'go' do %>
+                <div class="container_card">
+                    <%= cl_image_tag @second.photo.key, class: "image_candidat" %>
+                    <div class="container__profile">
+                        <div class="container__profile__text">
+                            <h2><%= @second.first_name %> <%= @second.last_name.upcase() %></h2>
+                            <p><%= @second.partie %></p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="classement">2ème</h3>
+            <% end %>
+            <%# third %>
+            <%= link_to candidat_path(@candidats), :action => 'go' do %>
+                <div class="container_card">
+                    <%= cl_image_tag @third.photo.key, class: "image_candidat" %>
+                    <div class="container__profile">
+                        <div class="container__profile__text">
+                            <h2><%= @third.first_name %> <%= @third.last_name.upcase() %></h2>
+                            <p><%= @third.partie %></p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="classement">3ème</h3>
+            <% end %>
+        </div>
+
         <h1 class="title-homepage">Candidat vous correpondant</h1>
         <% [@winner, @second, @third].each do |candidat| %>
             <div class="card">
@@ -22,6 +66,7 @@
                 <% end %>
             </div>
         <% end %>
+
     <% else %>
         <a href="/questionnaires/new" class="button-30">Démarrer</a>
         <hr>
