@@ -10,11 +10,26 @@
     margin-bottom: 5px;
  }
 
+// #23274E
+
  .title-homepage {
   color: white;
+  // background-color: #23274E;
   text-align: center;
   margin-top: 0;
   margin-right: 0;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 4px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
+  // opacity: 80%;
+ }
+
+ .classement {
+  color: white;
+  text-align: center;
+  border: white 1px solid;
+  text-decoration: none;
  }
 
  //------------------------------------------------------------------------
@@ -59,6 +74,7 @@
  hr {
     border-top: 5px double white;
     color: white;
+    opacity: 95%;
 }
 
  //------------------------------------------------------------------------
@@ -141,6 +157,7 @@
    font-size: 0.75rem;
    color: white;
    padding: 0px 0px 0px 10px;
+   margin-bottom: 3px;
   }
   p b {
    font-style: italic;
