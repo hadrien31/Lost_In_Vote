@@ -1,16 +1,17 @@
 h1{
   color: #BF3737;
   // text-shadow: #BF3737;
-  margin-top: 36px;
-  margin-right:90px;
+  margin-top: 51px;
+  margin-right: 322px;
+  border-color: aliceblue;
 
   }
+
 .check_top{
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-
+  margin-bottom: 15px;
 }
 
 .card-check {
@@ -22,10 +23,16 @@ h1{
   border-color: transparent;
   justify-content: space-evenly;}
 
-  .btn-check{
-    border-radius: 100%;
+  // .btn-check{
+  //   border-radius: 100%;
+  // }
+  a {
+    color:cornflowerblue;
   }
-
+  p {
+   display: flex;
+ text-align: justify;
+}
 
 // .try {
 //   padding: 5px;
