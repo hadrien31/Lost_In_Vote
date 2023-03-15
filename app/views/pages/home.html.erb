@@ -7,19 +7,21 @@
     <a href="/questionnaires/new" class="button-30">Refaire le test</a>
     <hr>
     <h1>Candidat vous correpondant</h1>
+    <% [@winner, @second, @third].each do |candidat| %>
         <div class="card">
-            <%= link_to candidat_path(@winner), :action => 'go' do %>
+            <%= link_to candidat_path(candidat), :action => 'go' do %>
                 <div class="container_card">
-                    <%= cl_image_tag @winner.photo.key, class: "image_candidat" %>
+                    <%= cl_image_tag candidat.photo.key, class: "image_candidat" %>
                     <div class="container__profile">
                         <div class="container__profile__text">
-                            <h2><%= @winner.first_name %> <%= @winner.last_name.upcase() %></h2>
-                            <p><%= @winner.partie %></p>
+                            <h2><%= candidat.first_name %> <%= candidat.last_name.upcase() %></h2>
+                            <p><%= candidat.partie %></p>
                         </div>
                     </div>
                 </div>
             <% end %>
         </div>
+      <% end %>
     <% else %>
     <a href="/questionnaires/new" class="button-30">Démarrer</a>
     <hr>
@@ -40,4 +42,3 @@
         </div>
     <% end %>
 </div>
-
