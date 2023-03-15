@@ -1,12 +1,11 @@
 <div class="container">
-
-<h1 class="ml2">Pas de panique ce questionnaire ne te prendra que 5 minutes!😮‍💨</h1>
-<%# <h1 class="kl">KOH-LANTA ADVENTURE</h1> %>
-<%# <p class="ml2"><span data-controller="typed-js"></span></p> %>
+<div class="title">
+  <h2 class="title-quest">Pas de panique ce questionnaire ne te prendra que 5 minutes!😮‍💨</h1>
+</div>
 <%= form_with model: @questionnaire do |f| %>
 
   <%= render 'questionnaires/question',
-    question_tooltip: "Alors que l'entreprise publique assure des missions de service public pour satisfaire l'intérêt général, l'entreprise privée produit ou vend des biens ou des services avec pour finalité de réaliser des bénéfices tout en cherchant à assurer sa pérennité.",
+    question_tooltip: "",
     question: "Quelles sont les mesures a prendre vis a vis de l'immigration ?",
     name: "reponse1",
     reponses: [

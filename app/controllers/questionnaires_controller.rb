@@ -146,9 +146,9 @@ class QuestionnairesController < ApplicationController
     @extreme_gauche_score.save
     @extreme_droite_score.save
     @droite_score.save
-    @winner = Candidat.winner_for(current_user)
-    @second = Candidat.second_for(current_user)
-    @third = Candidat.third_for(current_user)
+    @winner = Candidat.winner_for_rank(current_user, 1)
+    @second = Candidat.winner_for_rank(current_user, 2)
+    @third = Candidat.winner_for_rank(current_user, 3)
 
 
 
