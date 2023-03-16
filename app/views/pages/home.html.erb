@@ -12,11 +12,11 @@
             <%# winner %>
             <%= link_to candidat_path(@candidats), :action => 'go' do %>
                 <div class="container_card">
-                    <%= cl_image_tag @winner.photo.key, class: "image_candidat" %>
+                    <%= cl_image_tag @winner.candidats.photo.key, class: "image_candidat" %>
                     <div class="container__profile">
                         <div class="container__profile__text">
-                            <h2><%= @winner.first_name %> <%= @winner.last_name.upcase() %></h2>
-                            <p><%= @winner.partie %></p>
+                            <h2><%= @winner.candidats.first_name %> <%= @winner.candidats.last_name.upcase() %></h2>
+                            <p><%= @winner.candidats.partie %></p>
                         </div>
                     </div>
                 </div>
@@ -25,11 +25,11 @@
             <%# second %>
             <%= link_to candidat_path(@candidats), :action => 'go' do %>
                 <div class="container_card">
-                    <%= cl_image_tag @second.photo.key, class: "image_candidat" %>
+                    <%= cl_image_tag @second.candidats.photo.key, class: "image_candidat" %>
                     <div class="container__profile">
                         <div class="container__profile__text">
-                            <h2><%= @second.first_name %> <%= @second.last_name.upcase() %></h2>
-                            <p><%= @second.partie %></p>
+                            <h2><%= @second.candidats.first_name %> <%= @second.candidats.last_name.upcase() %></h2>
+                            <p><%= @second.candidats.partie %></p>
                         </div>
                     </div>
                 </div>
@@ -38,11 +38,11 @@
             <%# third %>
             <%= link_to candidat_path(@candidats), :action => 'go' do %>
                 <div class="container_card">
-                    <%= cl_image_tag @third.photo.key, class: "image_candidat" %>
+                    <%= cl_image_tag @third.candidats.photo.key, class: "image_candidat" %>
                     <div class="container__profile">
                         <div class="container__profile__text">
-                            <h2><%= @third.first_name %> <%= @third.last_name.upcase() %></h2>
-                            <p><%= @third.partie %></p>
+                            <h2><%= @third.candidats.first_name %> <%= @third.candidats.last_name.upcase() %></h2>
+                            <p><%= @third.candidats.partie %></p>
                         </div>
                     </div>
                 </div>
