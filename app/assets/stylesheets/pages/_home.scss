@@ -22,14 +22,16 @@
   border-radius: 4px;
   padding: 4px;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px;
+  font-size: large;
   // opacity: 80%;
  }
 
  .classement {
+  text-decoration: none;
   color: white;
   text-align: center;
   border: white 1px solid;
-  text-decoration: none;
+  font-size: large;
  }
 
  .title-homepage {
@@ -37,7 +39,23 @@
   text-align: center;
   margin-top: 0;
   margin-right: 0;
+ }
 
+ .candidat-percent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #BF3737;
+  text-decoration: transparent;
+}
+
+.text-percent {
+  margin-bottom: 0px;
+ }
+
+ a {
+  text-decoration: none;
  }
 
  //------------------------------------------------------------------------
@@ -115,6 +133,7 @@
     background-color: transparent;
     border-color: transparent;
     justify-content: space-evenly;
+    text-decoration: none;
 }
 
 .container_card {
@@ -123,7 +142,7 @@
  position: relative;
  box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
  margin: 3px;
-
+ text-decoration: none;
 
  .container__info {
   @include bottom;
@@ -159,16 +178,19 @@
   h2 {
    font-size: 1rem;
    color: white;
-    padding: 10px 0px 0px 10px;
+   padding: 10px 0px 0px 10px;
+   text-decoration: none;
   }
   p {
    font-size: 0.75rem;
    color: white;
    padding: 0px 0px 0px 10px;
    margin-bottom: 3px;
+   text-decoration: none;
   }
   p b {
    font-style: italic;
+   text-decoration: none;
   }
  }
 }
