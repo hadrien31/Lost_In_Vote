@@ -7,10 +7,10 @@
         <a href="/questionnaires/new" class="button-30">Refaire le test</a>
         <hr>
 
-        <h2 class="title-homepage">Candidat vous correpondant</h2>
+        <h2 class="title-homepage">Candidats vous correpondant</h2>
         <div class="card">
             <%# winner %>
-            <%= link_to candidat_path(@candidats), :action => 'go' do %>
+            <%= link_to candidat_path(Candidat.find(@winner[:candidat].id)), :action => 'go' do %>
                 <div class="container_card">
                     <%= cl_image_tag @winner[:candidat].photo.key, class: "image_candidat" %>
                     <div class="container__profile">
@@ -27,7 +27,7 @@
                 </div>
             <% end %>
             <%# second %>
-            <%= link_to candidat_path(@candidats), :action => 'go' do %>
+            <%= link_to candidat_path(Candidat.find(@second[:candidat].id)), :action => 'go' do %>
                 <div class="container_card">
                     <%= cl_image_tag @second[:candidat].photo.key, class: "image_candidat" %>
                     <div class="container__profile">
@@ -44,7 +44,7 @@
                 </div>
             <% end %>
             <%# third %>
-            <%= link_to candidat_path(@candidats), :action => 'go' do %>
+            <%= link_to candidat_path(Candidat.find(@third[:candidat].id)), :action => 'go' do %>
                 <div class="container_card">
                     <%= cl_image_tag @third[:candidat].photo.key, class: "image_candidat" %>
                     <div class="container__profile">
@@ -59,7 +59,7 @@
                     <progress id="file" max="100" value=<%= @third[:percent] %>></progress>
                     <p class="text-percent"><%= @third[:percent] %>%</p>
                 </div>            
-<% end %>
+            <% end %>
         </div>
 
     <% else %>
