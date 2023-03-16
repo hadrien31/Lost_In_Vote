@@ -1,12 +1,12 @@
 <div class="container">
-<div class="title">
-  <h2 class="title-quest">Pas de panique ce questionnaire ne te prendra que 5 minutes!😮‍💨</h1>
-</div>
+<%# <div class="title">
+  <h2 class="title-quest">Pas de panique ce questionnaire ne te prendra que 5 minutes!😮‍💨</h1> %>
+<%# </div> %>
 <%= form_with model: @questionnaire do |f| %>
 
   <%= render 'questionnaires/question',
-    question_tooltip: "",
-    question: "Quelles sont les mesures a prendre vis a vis de l'immigration ?",
+    question_tooltip: "Entrée dans un pays, une région, de personnes qui vivaient à l'extérieur et qui viennent s'y établir, y chercher un emploi.",
+    question: "Quelles sont les mesures à prendre vis à vis de l'immigration ?",
     name: "reponse1",
     reponses: [
       {label: "Il faut mieux les accueillir", value: 1, },
@@ -27,7 +27,7 @@
 
 <%= render 'questionnaires/question',
     question_tooltip: "",
-    question: "<Devons nous> accepter de changer notre mode de consommation alimentaire pour limiter l'exploitation de la nature ?",
+    question: "Devons-nous accepter de changer notre mode de consommation alimentaire pour limiter l'exploitation de la nature ?",
     name: "reponse3",
     reponses: [
       {label: "Oui", value: 1},
@@ -39,7 +39,7 @@
 
 <%= render 'questionnaires/question',
     question_tooltip: "Usage des procédés qui permettent de hâter ou de provoquer la mort de malades incurables qui souffrent et souhaitent mourir.",
-    question: "L'euthanasie doit être autorisée ?",
+    question: "L'euthanasie doit-elle être autorisée ?",
     name: "reponse4",
     reponses: [
       {label: "Oui", value: 1},
@@ -50,18 +50,18 @@
 
  <%= render 'questionnaires/question',
     question_tooltip: "Le temps de travail moyen actuel en France est de 35h rapartis dur 5 jours",
-    question: "Quelle approche faut il avoir sur la durée du temps de travail hebdomadaire ?",
+    question: "Quelle approche faut-il avoir sur la durée du temps de travail hebdomadaire ?",
     name: "reponse5",
     reponses: [
-      {label: "Il faut le réduire", value: 1},
-      {label: "Il faut le liberaliser", value: 2},
-      {label: "Il ne faut pas le modifier", value: 3}
+      {label: "Il faut la réduire", value: 1},
+      {label: "Il faut la liberaliser", value: 2},
+      {label: "Il ne faut pas la modifier", value: 3}
     ]
   %>
 
 <%= render 'questionnaires/question',
-    question_tooltip: "Le montant actuel du SMIC s'eleve a 1709,28€ soit 1353€ net.",
-    question: "Etes vous favorable à une revalorisation du smic ?",
+    question_tooltip: "Le montant actuel du SMIC s'eleve a 1709,28€ brut soit 1353€ net.",
+    question: "Etes-vous favorable à une revalorisation du smic ?",
     name: "reponse6",
     reponses: [
       {label: "Oui au moins a 1400€", value: 1},
@@ -72,7 +72,7 @@
 
 <%= render 'questionnaires/question',
     question_tooltip: "",
-    question: "Le cannabis doit il être légalisé ?",
+    question: "Le cannabis doit-il être légalisé ?",
     name: "reponse7",
     reponses: [
       {label: "Oui", value: 1},
@@ -93,19 +93,19 @@
   %>
 
 <%= render 'questionnaires/question',
-    question_tooltip: "Quel priorité s'impose sur le ferroviaire?",
-    question: "Quel priorité s'impose sur le ferroviaire ?",
+    question_tooltip: "",
+    question: "Quelle priorité s'impose sur le ferroviaire ?",
     name: "reponse9",
     reponses: [
       {label: "Baisser le tarif des billets ou favoriser la gratuité dans certains cas", value: 1},
       {label: "Prioriser les trains du quotidien", value: 2},
-      {label: "Il ne faut rien faire tout va bien🙈", value: 3}
+      {label: "Il ne faut rien faire tout va bien", value: 3}
     ]
   %>
 
 <%= render 'questionnaires/question',
     question_tooltip: "",
-    question: "Quel est la mesure pour revaloriser le metier d'enseignant ?",
+    question: "Quelle est la mesure pour revaloriser le métier d'enseignant ?",
     name: "reponse10",
     reponses: [
       {label: "Augmenter drastiquement les salaires", value: 1},
@@ -117,7 +117,7 @@
 
  <%= render 'questionnaires/question',
     question_tooltip: "L'aide sociale se définit comme l'ensemble des prestations constituant une obligation mise à la charge des collectivités publiques, notamment du Département et destinées à faire face à un état de besoin pour des personnes dans l'impossibilité d'y pourvoir.",
-    question: "Les aides sociales dissuadent de travailler ?",
+    question: "Les aides sociales dissuadent-elles de travailler ?",
     name: "reponse11",
     reponses: [
       {label: "Oui", value: 1},
@@ -128,7 +128,7 @@
 
 <%= render 'questionnaires/question',
     question_tooltip: "",
-    question: "Les peines de prison lourdes sont efficaces car elles sont dissuasives ?",
+    question: "Les peines de prison lourdes sont elles efficaces car elles dissuasives ?",
     name: "reponse12",
     reponses: [
       {label: "Oui", value: 1},
@@ -139,7 +139,7 @@
 
   <%= render 'questionnaires/question',
     question_tooltip: "",
-    question: "Est il légitime pour un pays d'intervenir militairement à l'étranger pour défendre ses intérêts économiques ?",
+    question: "Est-il légitime pour un pays d'intervenir militairement à l'étranger pour défendre ses intérêts économiques ?",
     name: "reponse13",
     reponses: [
       {label: "Oui", value: 1},
@@ -152,7 +152,7 @@
 
   <%= render 'questionnaires/question',
     question_tooltip: "En France il y a actuellement 26 reacteurs nucleaires en fonctions sur les 56 se trouvant sur le territoire francais",
-    question: "Doit on construire de nouveaux reacteurs nucleaires ?",
+    question: "Doit-on construire de nouveaux réacteurs nucléaires ?",
     name: "reponse14",
     reponses: [
       {label: "Oui", value: 1},
