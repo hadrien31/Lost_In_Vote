@@ -16,7 +16,7 @@
   %>
 <%= render 'questionnaires/question',
     question_tooltip: "Alors que l'entreprise publique assure des missions de service public pour satisfaire l'intérêt général, l'entreprise privée produit ou vend des biens ou des services avec pour finalité de réaliser des bénéfices tout en cherchant à assurer sa pérennité.",
-    question: "Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché",
+    question: "Les entreprises publiques doivent elles être administrées comme des entreprises privées et suivre la logique du marché ?",
     name: "reponse2",
     reponses: [
       {label: "Oui", value: 1},
@@ -26,8 +26,8 @@
   %>
 
 <%= render 'questionnaires/question',
-    question_tooltip: "Alors que l'entreprise publique assure des missions de service public pour satisfaire l'intérêt général, l'entreprise privée produit ou vend des biens ou des services avec pour finalité de réaliser des bénéfices tout en cherchant à assurer sa pérennité.",
-    question: "Nous devons accepter de changer notre mode de consommation alimentaire pour limiter l'exploitation de la nature",
+    question_tooltip: "",
+    question: "<Devons nous> accepter de changer notre mode de consommation alimentaire pour limiter l'exploitation de la nature ?",
     name: "reponse3",
     reponses: [
       {label: "Oui", value: 1},
@@ -39,7 +39,7 @@
 
 <%= render 'questionnaires/question',
     question_tooltip: "Usage des procédés qui permettent de hâter ou de provoquer la mort de malades incurables qui souffrent et souhaitent mourir.",
-    question: "L'euthanasie doit être autorisée?",
+    question: "L'euthanasie doit être autorisée ?",
     name: "reponse4",
     reponses: [
       {label: "Oui", value: 1},
@@ -50,29 +50,29 @@
 
  <%= render 'questionnaires/question',
     question_tooltip: "Le temps de travail moyen actuel en France est de 35h rapartis dur 5 jours",
-    question: "Quelle approche faut il avoir sur la durée du temps de travail hebdomadaire?",
+    question: "Quelle approche faut il avoir sur la durée du temps de travail hebdomadaire ?",
     name: "reponse5",
     reponses: [
-      {label: "Oui", value: 1},
-      {label: "Je n'ai pas d'avis", value: 2},
-      {label: "Non", value: 3}
+      {label: "Il faut le réduire", value: 1},
+      {label: "Il faut le liberaliser", value: 2},
+      {label: "Il ne faut pas le modifier", value: 3}
     ]
   %>
 
 <%= render 'questionnaires/question',
     question_tooltip: "Le montant actuel du SMIC s'eleve a 1709,28€ soit 1353€ net.",
-    question: "Etes vous favorable à une revalorisation du smic?",
+    question: "Etes vous favorable à une revalorisation du smic ?",
     name: "reponse6",
     reponses: [
-      {label: "Oui", value: 1},
-      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Oui au moins a 1400€", value: 1},
+      {label: "Oui au moins a 1800€", value: 2},
       {label: "Non", value: 3}
     ]
   %>
 
 <%= render 'questionnaires/question',
     question_tooltip: "",
-    question: "Le cannabis doit il être légalisé?",
+    question: "Le cannabis doit il être légalisé ?",
     name: "reponse7",
     reponses: [
       {label: "Oui", value: 1},
@@ -83,90 +83,81 @@
 
 <%= render 'questionnaires/question',
     question_tooltip: "Le pouvoir d'achat correspond au volume de biens et services qu'un revenu permet d'acheter.",
-    question: "Que faire pour augmenter le pouvoir d'achat?",
+    question: "Que faire pour augmenter le pouvoir d'achat ?",
     name: "reponse8",
     reponses: [
-      {label: "Oui", value: 1},
-      {label: "Je n'ai pas d'avis", value: 2},
-      {label: "Non", value: 3}
+      {label: "Augmenter les salaires", value: 1},
+      {label: "Alleger les impôts", value: 2},
+      {label: "Verser une prime", value: 3}
     ]
   %>
 
 <%= render 'questionnaires/question',
     question_tooltip: "Quel priorité s'impose sur le ferroviaire?",
-    question: "Quel priorité s'impose sur le ferroviaire?",
+    question: "Quel priorité s'impose sur le ferroviaire ?",
     name: "reponse9",
     reponses: [
-      {label: "Oui", value: 1},
-      {label: "Je n'ai pas d'avis", value: 2},
-      {label: "Non", value: 3}
+      {label: "Baisser le tarif des billets ou favoriser la gratuité dans certains cas", value: 1},
+      {label: "Prioriser les trains du quotidien", value: 2},
+      {label: "Il ne faut rien faire tout va bien🙈", value: 3}
     ]
   %>
 
 <%= render 'questionnaires/question',
     question_tooltip: "",
-    question: "Quel est la mesure pour revaloriser le metier d'enseignant?",
+    question: "Quel est la mesure pour revaloriser le metier d'enseignant ?",
     name: "reponse10",
     reponses: [
-      {label: "augmenter drastiquement les salaires", value: 1},
+      {label: "Augmenter drastiquement les salaires", value: 1},
       {label: "Augmenter les moyens", value: 2},
-      {label: "augmenter modérément les salaires", value: 3}
+      {label: "Augmenter modérément les salaires", value: 3}
     ]
   %>
 
 
  <%= render 'questionnaires/question',
     question_tooltip: "L'aide sociale se définit comme l'ensemble des prestations constituant une obligation mise à la charge des collectivités publiques, notamment du Département et destinées à faire face à un état de besoin pour des personnes dans l'impossibilité d'y pourvoir.",
-    question: "Les aides sociales dissuadent de travailler?",
+    question: "Les aides sociales dissuadent de travailler ?",
     name: "reponse11",
     reponses: [
-      {label: "augmenter drastiquement les salaires", value: 1},
-      {label: "Augmenter les moyens", value: 2},
-      {label: "augmenter modérément les salaires", value: 3}
+      {label: "Oui", value: 1},
+      {label: "Je nai pas d'avis", value: 2},
+      {label: "Non", value: 3}
     ]
   %>
 
 <%= render 'questionnaires/question',
     question_tooltip: "",
-    question: "Les peines de prison lourdes sont efficaces car elles sont dissuasives",
+    question: "Les peines de prison lourdes sont efficaces car elles sont dissuasives ?",
     name: "reponse12",
     reponses: [
-      {label: "augmenter drastiquement les salaires", value: 1},
-      {label: "Augmenter les moyens", value: 2},
-      {label: "augmenter modérément les salaires", value: 3}
+      {label: "Oui", value: 1},
+      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Non", value: 3}
     ]
   %>
 
   <%= render 'questionnaires/question',
     question_tooltip: "",
-    question: "Il est légitime pour un pays d'intervenir militairement à l'étranger pour défendre ses intérêts économiques",
+    question: "Est il légitime pour un pays d'intervenir militairement à l'étranger pour défendre ses intérêts économiques ?",
     name: "reponse13",
     reponses: [
-      {label: "augmenter drastiquement les salaires", value: 1},
-      {label: "Augmenter les moyens", value: 2},
-      {label: "augmenter modérément les salaires", value: 3}
+      {label: "Oui", value: 1},
+      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Non", value: 3}
     ]
   %>
 
-  <%= render 'questionnaires/question',
-    question_tooltip: "",
-    question: "Il est légitime pour un pays d'intervenir militairement à l'étranger pour défendre ses intérêts économiques",
-    name: "reponse14",
-    reponses: [
-      {label: "augmenter drastiquement les salaires", value: 1},
-      {label: "Augmenter les moyens", value: 2},
-      {label: "augmenter modérément les salaires", value: 3}
-    ]
-  %>
+
 
   <%= render 'questionnaires/question',
     question_tooltip: "En France il y a actuellement 26 reacteurs nucleaires en fonctions sur les 56 se trouvant sur le territoire francais",
-    question: "Doit on construire de nouveaux reacteurs nucleaires?",
-    name: "reponse15",
+    question: "Doit on construire de nouveaux reacteurs nucleaires ?",
+    name: "reponse14",
     reponses: [
-      {label: "augmenter drastiquement les salaires", value: 1},
-      {label: "Augmenter les moyens", value: 2},
-      {label: "augmenter modérément les salaires", value: 3}
+      {label: "Oui", value: 1},
+      {label: "Je n'ai pas d'avis", value: 2},
+      {label: "Non", value: 3}
     ]
   %>
 
