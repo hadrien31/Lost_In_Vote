@@ -12,60 +12,55 @@
             <%# winner %>
             <%= link_to candidat_path(@candidats), :action => 'go' do %>
                 <div class="container_card">
-                    <%= cl_image_tag @winner.candidats.photo.key, class: "image_candidat" %>
+                    <%= cl_image_tag @winner[:candidat].photo.key, class: "image_candidat" %>
                     <div class="container__profile">
                         <div class="container__profile__text">
-                            <h2><%= @winner.candidats.first_name %> <%= @winner.candidats.last_name.upcase() %></h2>
-                            <p><%= @winner.candidats.partie %></p>
+                            <h2><%= @winner[:candidat].first_name %> <%= @winner[:candidat].last_name.upcase() %></h2>
+                            <p><%= @winner[:candidat].partie %></p>
                         </div>
                     </div>
                 </div>
                 <h3 class="classement">1er</h3>
+                <div class="candidat-percent">
+                    <progress id="file" max="100" value=<%= @winner[:percent] %>></progress>
+                    <p class="text-percent"><%= @winner[:percent] %>%</p>
+                </div>
             <% end %>
             <%# second %>
             <%= link_to candidat_path(@candidats), :action => 'go' do %>
                 <div class="container_card">
-                    <%= cl_image_tag @second.candidats.photo.key, class: "image_candidat" %>
+                    <%= cl_image_tag @second[:candidat].photo.key, class: "image_candidat" %>
                     <div class="container__profile">
                         <div class="container__profile__text">
-                            <h2><%= @second.candidats.first_name %> <%= @second.candidats.last_name.upcase() %></h2>
-                            <p><%= @second.candidats.partie %></p>
+                            <h2><%= @second[:candidat].first_name %> <%= @second[:candidat].last_name.upcase() %></h2>
+                            <p ><%= @second[:candidat].partie %></p>
                         </div>
                     </div>
                 </div>
                 <h3 class="classement">2ème</h3>
+                <div class="candidat-percent">
+                    <progress id="file" max="100" value=<%= @second[:percent] %>> </progress>
+                    <p class="text-percent"><%= @second[:percent] %>%</p>
+                </div>
             <% end %>
             <%# third %>
             <%= link_to candidat_path(@candidats), :action => 'go' do %>
                 <div class="container_card">
-                    <%= cl_image_tag @third.candidats.photo.key, class: "image_candidat" %>
+                    <%= cl_image_tag @third[:candidat].photo.key, class: "image_candidat" %>
                     <div class="container__profile">
                         <div class="container__profile__text">
-                            <h2><%= @third.candidats.first_name %> <%= @third.candidats.last_name.upcase() %></h2>
-                            <p><%= @third.candidats.partie %></p>
+                            <h2><%= @third[:candidat].first_name %> <%= @third[:candidat].last_name.upcase() %></h2>
+                            <p><%= @third[:candidat].partie %> %</p>
                         </div>
                     </div>
                 </div>
                 <h3 class="classement">3ème</h3>
-            <% end %>
+                <div class="candidat-percent">
+                    <progress id="file" max="100" value=<%= @third[:percent] %>></progress>
+                    <p class="text-percent"><%= @third[:percent] %>%</p>
+                </div>            
+<% end %>
         </div>
-
-        <h1 class="title-homepage">Candidat vous correpondant</h1>
-        <% [@winner, @second, @third].each do |candidat| %>
-            <div class="card">
-                <%= link_to candidat_path(candidat), :action => 'go' do %>
-                    <div class="container_card">
-                        <%= cl_image_tag candidat.photo.key, class: "image_candidat" %>
-                        <div class="container__profile">
-                            <div class="container__profile__text">
-                                <h2><%= candidat.first_name %> <%= candidat.last_name.upcase() %></h2>
-                                <p><%= candidat.partie %></p>
-                            </div>
-                        </div>
-                    </div>
-                <% end %>
-            </div>
-        <% end %>
 
     <% else %>
         <a href="/questionnaires/new" class="button-30">Démarrer</a>

@@ -18,7 +18,7 @@ class Candidat < ApplicationRecord
     # on recupère le candidat correspondant
     candidat = scores_sorted[- rank].candidat
     score = Score.find_by(candidat: candidat, user: user)
-    percent = (score.value * 100) / 12
+    percent = ((score.value * 100) / 14) /3
 
     return {
       candidat: candidat,
