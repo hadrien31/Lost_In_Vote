@@ -141,6 +141,24 @@ class QuestionnairesController < ApplicationController
       @centre_score.value += 1
       @droite_score.value += 1
     end
+    if params["questionnaire"]["reponse13"]  == "1"
+      @extreme_gauche_score.value += 11
+      @extreme_droite_score.value += 1
+    elsif params["questionnaire"]["reponse13"]  == "2"
+      @gauche_score.value += 1
+    elsif params["questionnaire"]["reponse13"]  == "3"
+      @centre_score.value += 1
+      @droite_score.value += 1
+    end
+    if params["questionnaire"]["reponse14"]  == "1"
+      @extreme_gauche_score.value += 11
+      @extreme_droite_score.value += 1
+    elsif params["questionnaire"]["reponse14"]  == "2"
+      @gauche_score.value += 1
+    elsif params["questionnaire"]["reponse14"]  == "3"
+      @centre_score.value += 1
+      @droite_score.value += 1
+    end
     @gauche_score.save
     @centre_score.save
     @extreme_gauche_score.save
@@ -149,7 +167,7 @@ class QuestionnairesController < ApplicationController
     @winner = Candidat.winner_for_rank(current_user, 1)
     @second = Candidat.winner_for_rank(current_user, 2)
     @third = Candidat.winner_for_rank(current_user, 3)
-    
+
 
 
     redirect_to root_path
