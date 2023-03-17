@@ -6,10 +6,10 @@ class QuestionnairesController < ApplicationController
 
   def create
     @candidats = Candidat.all
-    gauche = Candidat.where(partie: "La Democratie en Marche").first
+    gauche = Candidat.where(partie: "La Démocratie en Marche").first
     @gauche_score = Score.reset(candidat: gauche, user: current_user)
     @gauche_score.value = 0
-    droite = Candidat.where(partie: "L'array Publique").first
+    droite = Candidat.where(partie: "L'Array Publique").first
     @droite_score = Score.reset(candidat: droite, user: current_user)
     @droite_score.value = 0
     extreme_gauche = Candidat.where(partie: "La France Indomptable").first
@@ -18,7 +18,7 @@ class QuestionnairesController < ApplicationController
     extreme_droite = Candidat.where(partie: "Parti Nationaliste").first
     @extreme_droite_score = Score.reset(candidat: extreme_droite, user: current_user)
     @extreme_droite_score.value = 0
-    centre = Candidat.where(partie: "Parti Liberal").first
+    centre = Candidat.where(partie: "Parti Libéral").first
     @centre_score = Score.reset(candidat: centre, user: current_user)
     @centre_score.value = 0
 
@@ -167,9 +167,6 @@ class QuestionnairesController < ApplicationController
     @winner = Candidat.winner_for_rank(current_user, 1)
     @second = Candidat.winner_for_rank(current_user, 2)
     @third = Candidat.winner_for_rank(current_user, 3)
-
-
-
     redirect_to root_path
   end
 end

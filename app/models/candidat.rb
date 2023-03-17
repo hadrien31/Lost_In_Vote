@@ -6,7 +6,6 @@ class Candidat < ApplicationRecord
 
   def self.winner_for_rank(user, rank = 1)
     return nil unless user
-
     # On recuper le score de chaque candidat pour ce user
     scores = Candidat.all.map do |candidat|
       Score.find_by(candidat: candidat, user: user)

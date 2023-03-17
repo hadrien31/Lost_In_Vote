@@ -5,6 +5,6 @@ class Score < ApplicationRecord
   def self.reset(args)
     existing_score = find_by(args)
     existing_score&.destroy
-    Score.create(args)
+    Score.create!(args)
   end
 end
